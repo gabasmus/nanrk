@@ -349,7 +349,7 @@ span.onclick = function() {
 }
 </script>
 
-
+<p style="margin-left: 100px; margin-right: 100px;text-align: justify;">
 <br/>Министерство здравоохранения: 
 <br/>Уровень TRL-9 – КазНИВИ, ННЦООИ, РКМ, ННИПББ
 <br/>TRL-8 – НЦБ
@@ -362,7 +362,37 @@ span.onclick = function() {
 <br/>Не высокая остепененность в РГП на ПХВ «Национальный научный центр фтизиопульмонологии» - 43,2%, ТОО «Республиканская коллекция микроорганизмов» - 33,3%, РГП на ПХВ «Национальный Производственный Центр Трансфузиологии» - 28%, ТОО «Национальный центр биотехнологии» - 26,8%, АО «Научно-исследовательский институт кардиологии и внутренних болезней» - 25%
 <br/>Самая низкая остепененность в РГП на ПХВ «Национальный центр общественного здравоохранения» - 21%, АО «Научный центр противоинфекционных препаратов» - 19,8%, РГП «Научно-исследовательский институт проблем биологической безопасности» - 14,2%, АО «Научный центр акушерства, гинекологии и перинатологии» - 5,6%, ТОО «OtarBioPharm» - 1,9%. Данные по АО «Национальный центр нейрохирургии» представлены не полностью.
 
-<br/><p align="center">  <img src="2.png" alt="qr"/></p>
+<img id="myImg" src="2.png" alt="Snow" style="width:100%;max-width:300px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img02">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img02");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
 
 <p style="margin-left: 100px; margin-right: 100px;text-align: justify;">
 
