@@ -156,7 +156,7 @@ cursor: pointer;
 .vertmenu .subCat.minus,
 .subCat:checked + .chka:before {
 content: '+';
-font-size: 26px;
+font-size: 14px;
 color: #1266B1;
 font-weight: bold;   
 font-family: Courier;   
@@ -166,13 +166,13 @@ content: '-';
 }
 .vertmenu a {
 color: #477AB9;
-font-size: 16px;
+font-size: 12px;
 font-weight:bold;
 text-decoration:none;
 }
 .vertmenu ul li li a {
 color: white;
-font-size: 15px;
+font-size: 12px;
 font-weight:normal;
 text-decoration:none;
 }
@@ -197,7 +197,7 @@ display:none;
 }
 .vertmenu ul li li a:before {
 content: '\203A';
-font-size: 20px;
+font-size: 14px;
 padding-right: 6px;
 color: white;
 font-weight: bold;
@@ -212,11 +212,11 @@ color: #1266B1;
     
     background-color: #024186;
     
-    padding-top: 20px;
+    padding-top: 10px;
     flex: 30%;
-    padding: 20px;
+    padding: 10px;
     z-index: 1;
-    height: 100%;
+    height: 70%;
     width: 300px;
    
     overflow-x: hidden;
@@ -226,7 +226,7 @@ color: #1266B1;
 .sidenav a {
     padding: 6px 6px 6px 6px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 14px;
     color: white;
     display: block;
 }
@@ -239,7 +239,7 @@ color: #1266B1;
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav a {font-size: 14px;}
 }
 
 
@@ -431,28 +431,45 @@ body {
     
 
 
+
+
+
+
+
+
     
 </style>
-
 </head>
+<body>
 
-<body lang=RU>
-	    <div class="header2"> 
+    <div class="header2"> 
 
             <a href="https://qazscience.gov.kz/" target="_blank"><img src="photo1702956005.jpeg" width="250" heiight="168.25" border="0" align="left" vspace="0" hspace="0"></a>
  
     </div>
+
+
     <div class="sidenav">
+      
         <div class="vertmenu">
-            <ul>
+    
+                  
+            
+            <ul>  
+                <li>
+            <a href="vvod.html">Введение</a>
+            <input type="checkbox" class="subCat" id="1" checked="checked" />
+            <label class="chka" for="1"></label>
+           
+        </li>
                 <li>
                     <a href="1.1.html">БЛОК 1</a>
-                       <input type="checkbox" class="subCat" id="1" checked="checked" />
-                       <label class="chka" for="1"></label>
+                       <input type="checkbox" class="subCat" id="2" />
+                       <label class="chka" for="2"></label>
                        <ul style="display:none">
                           <li>
                               <a href="1.1.html">п.1.1.Аналитические и прогнозные исследования по научно-технологическому развитию отраслей экономики</a>
-                           
+                             
                           </li>
                           <li>
                               <a href="1.2.html">п.1.2.Обзор текущей ситуации развития науки в сравнений с мировой тенденцией и рынком</a>
@@ -479,8 +496,8 @@ body {
                </li>   
         <li>
             <a>БЛОК 2</a>
-            <input type="checkbox" class="subCat" id="2" />
-            <label class="chka" for="2"></label>
+            <input type="checkbox" class="subCat" id="3" />
+            <label class="chka" for="3"></label>
             <ul style="display:none">
                 <li>
                     <a href="2.1.html">п.2.1.Анализ международного опыта по предоставлению социальных льгот для ученых</a>
@@ -501,8 +518,8 @@ body {
         </li>
         <li>
             <a>БЛОК 3</a>
-            <input type="checkbox" class="subCat" id="3" />
-            <label class="chka" for="3"></label>
+            <input type="checkbox" class="subCat" id="4" />
+            <label class="chka" for="4"></label>
             <ul style="display:none">
                 <li>
                     <a href="3.1.html">п.3.1.Анализ научно-технической инфраструктуры  подведомственных организаций</a>
@@ -520,8 +537,8 @@ body {
         </li>
         <li>
             <a>БЛОК 4</a>
-            <input type="checkbox" class="subCat" id="4" />
-            <label class="chka" for="4"></label>
+            <input type="checkbox" class="subCat" id="5" />
+            <label class="chka" for="5"></label>
             <ul style="display:none">
                 <li>
                     <a href="4.1.html">п.4.1.Выработка рекомендаций по увеличению финансирования развития науки</a>
@@ -531,8 +548,8 @@ body {
         </li>
         <li>
             <a>БЛОК 5</a>
-            <input type="checkbox" class="subCat" id="5" />
-            <label class="chka" for="5"></label>
+            <input type="checkbox" class="subCat" id="6" />
+            <label class="chka" for="6"></label>
             <ul style="display:none">
                 <li>
                     <a href="5.1.html">п.5.1.Разъяснение среди заинтересованных сторон об условиях государственных инструментах финансирования науки и коммерциализации результатов научной и научно-технической деятельности</a>
@@ -553,21 +570,21 @@ body {
         </li>
         
          <li>
-            <a href="#">Заключение</a>
-            <input type="checkbox" class="subCat" id="6" />
-            <label class="chka" for="6"></label>
+            <a href="vyvod.html">Заключение</a>
+            <input type="checkbox" class="subCat" id="7" />
+            <label class="chka" for="7"></label>
            
         </li>
          <li>
-            <a href="#">Список использованной литературы</a>
-            <input type="checkbox" class="subCat" id="7" />
-            <label class="chka" for="7"></label>
+            <a href="literatura.html">Список использованной литературы</a>
+            <input type="checkbox" class="subCat" id="8" />
+            <label class="chka" for="8"></label>
             
         </li>
          <li>
-            <a href="#">Приложения</a>
-            <input type="checkbox" class="subCat" id="8" />
-            <label class="chka" for="8"></label>
+            <a href="app.html">Приложения</a>
+            <input type="checkbox" class="subCat" id="9" />
+            <label class="chka" for="9"></label>
             
         </li>
         </ul>
