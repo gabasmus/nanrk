@@ -87,92 +87,581 @@ div.WordSection1
 ul
 	{margin-bottom:0cm;}
 -->
+
+	body {
+    font-family: "Lato", sans-serif;
+}
+
+/* Header/Blog Title */
+.header {
+    
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    background: white;
+    color: #024186;
+margin-left: 350px
+}    
+    .header2 {
+      position: fixed;
+    padding: 25px;
+    font-size: 16px;
+    text-align: center;
+    background: white;
+    color: #024186;
+    width: 290px;
+
+}    
+    
+.vertmenu {
+margin: 0 15px;
+font-family: 'Open Sans', sans-serif;   
+}
+
+
+    
+.vertmenu ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.vertmenu ul li {
+position: relative;
+margin: 0;
+line-height: 20px;
+text-transform: uppercase;   
+}
+.vertmenu ul li li {
+padding-left:15px;
+}
+.vertmenu .subCat, .chka {
+top: 0;
+right: 0px;
+position: absolute;
+cursor: pointer;
+}
+.vertmenu .subCat.plus,
+.chka:before,
+.vertmenu .subCat.minus,
+.subCat:checked + .chka:before {
+content: '+';
+font-size: 26px;
+color: #1266B1;
+font-weight: bold;   
+font-family: Courier;   
+}
+.vertmenu .subCat.minus, .subCat:checked + .chka:before {
+content: '-';
+}
+.vertmenu a {
+color: #477AB9;
+font-size: 16px;
+font-weight:bold;
+text-decoration:none;
+}
+.vertmenu ul li li a {
+color: white;
+font-size: 15px;
+font-weight:normal;
+text-decoration:none;
+}
+.vertmenu a.active {
+color: #00B1EC;
+}
+.vertmenu a:hover {
+text-decoration: none;
+color: #000 !important;
+}
+.vertmenu > ul > li ul {
+display: none;
+}
+.vertmenu > ul > li a.active + span + ul {
+display: block !important;
+}
+.vertmenu > ul > li .subCat:checked ~ ul {
+display: block !important;
+}
+.vertmenu input[type=checkbox].subCat {
+display:none;
+}
+.vertmenu ul li li a:before {
+content: '\203A';
+font-size: 20px;
+padding-right: 6px;
+color: white;
+font-weight: bold;
+}
+.vertmenu > ul li li a:hover:before {
+color: #1266B1;
+}
+
+.sidenav {
+   
+    position: fixed;
+    
+    background-color: #024186;
+    
+    padding-top: 20px;
+    flex: 30%;
+    padding: 20px;
+    z-index: 1;
+    height: 100%;
+    width: 300px;
+   
+    overflow-x: hidden;
+       margin-top: 203px
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 6px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: white;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Add a card effect for articles */
+.card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+ }
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    clear: both;
+   
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn {   
+        width: 100%;
+        padding: 0; 
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+        margin-left: 400px
+    }
+}
+
+.main {
+      flex: 70%;
+    background-color: white;
+    padding: 20px;
+    margin-left: 350px
+}
+
+
+
+
+
+
+
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10, .mySlides11, .mySlides12, .mySlides13, .mySlides14, .mySlides15, .mySlides16, .mySlides17, .mySlides18, .mySlides19, .mySlides20 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -8px;
+  background-color: #024186;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: #024186;
+} 
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  right: 15 px; 
+  top: 0;
+}
+
+/* Number text (1/ etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+    top: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: AUTO;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: right;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+/* Add a gray background color with some padding */
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #3c5798;
+}
+
+
 </style>
 
 </head>
 
 <body lang=RU>
+	    <div class="header2"> 
+
+            <a href="https://qazscience.gov.kz/" target="_blank"><img src="photo1702956005.jpeg" width="250" heiight="168.25" border="0" align="left" vspace="0" hspace="0"></a>
+ 
+    </div>
+    <div class="sidenav">
+        <div class="vertmenu">
+            <ul>
+                <li>
+                    <a href="1.1.html">БЛОК 1</a>
+                       <input type="checkbox" class="subCat" id="1" checked="checked" />
+                       <label class="chka" for="1"></label>
+                       <ul style="display:none">
+                          <li>
+                              <a href="1.1.html">п.1.1.Аналитические и прогнозные исследования по научно-технологическому развитию отраслей экономики</a>
+                           
+                                   
+                          </li>
+                          <li>
+                              <a href="1.2.html">п.1.2.Обзор текущей ситуации развития науки в сравнений с мировой тенденцией и рынком</a>
+
+                          </li>
+                          <li>
+                               <a href="1.3.html">п.1.3.Выработка рекомендации по управлению научной деятельностью</a>
+                          </li>
+                
+                          <li>
+                               <a href="1.4.html">п.1.4.Выявить перспективные научные разработки, объекты интеллектуальной собственности</a>
+                          </li>
+                
+                          <li>
+                               <a href="1.5.html">п.1.5.Анализ уровня технологической готовности</a>
+                          </li>
+                
+                          <li>
+                               <a href="1.6.html">п.1.6.Формирование Проекта Национальной карты c критическими технологиями</a>
+                          </li>
+                          <li>
+                               <a href="1.7.html">п.1.7.Анализ эффективности использования объектов интеллектуальной собственности</a>
+                          </li>
+                     </ul>
+               </li>   
+        <li>
+            <a>БЛОК 2</a>
+            <input type="checkbox" class="subCat" id="2" />
+            <label class="chka" for="2"></label>
+            <ul style="display:none">
+                <li>
+                    <a href="2.1.html">п.2.1.Анализ международного опыта по предоставлению социальных льгот для ученых</a>
+                </li>
+                <li>
+                    <a href="2.2.html">п.2.2.Анализ международного опыта по принципам академической честности и исследовательской этики</a>
+                </li>
+                <li>
+                    <a href="2.3.html">п.2.3.Выработка предложений по стимулированию возвращения ученых – соотечественников из ближнего и дальнего зарубежья</a>
+                </li>
+                <li>
+                    <a href="2.4.html">п.2.4.Анализ мирового опыта подготовки магистров и докторов в научно-исследовательских организациях</a>
+                </li>
+                 <li>
+                    <a href="2.5.html">п.2.5.Выработка критериев прохождения стажировки ученых по программе «500-ученых»</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a>БЛОК 3</a>
+            <input type="checkbox" class="subCat" id="3" />
+            <label class="chka" for="3"></label>
+            <ul style="display:none">
+                <li>
+                    <a href="3.1.html">п.3.1.Анализ научно-технической инфраструктуры  подведомственных организаций</a>
+                </li>
+                <li>
+                    <a href="3.2.html">п.3.2.Анализ мирового опыта по введению единой информационной системы</a>
+                </li>
+                 <li>
+                    <a href="3.3.html">п.3.3.Анализ международных баз данных научных статей</a>
+                </li>
+                  <li>
+                    <a href="3.4.html">п.3.4.Анализ перспективности трансформации региональных ОВПО</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a>БЛОК 4</a>
+            <input type="checkbox" class="subCat" id="4" />
+            <label class="chka" for="4"></label>
+            <ul style="display:none">
+                <li>
+                    <a href="4.1.html">п.4.1.Выработка рекомендаций по увеличению финансирования развития науки</a>
+                </li>
+              
+            </ul>
+        </li>
+        <li>
+            <a>БЛОК 5</a>
+            <input type="checkbox" class="subCat" id="5" />
+            <label class="chka" for="5"></label>
+            <ul style="display:none">
+                <li>
+                    <a href="5.1.html">п.5.1.Разъяснение среди заинтересованных сторон об условиях государственных инструментах финансирования науки и коммерциализации результатов научной и научно-технической деятельности</a>
+                </li>
+                <li>
+                    <a href="5.2.html">п.5.2.Популяризация науки и научно-технической деятельности, а также достижений отечественной науки и технологий, совместно с научными организациями</a>
+                </li>
+                <li>
+                    <a href="5.3.html">п.5.3.Консолидировать экспертное сообщество по вопросам науки и коммерциализации для выработки практических рекомендаций по вопросам развития науки.</a>
+                </li>
+                  <li>
+                    <a href="5.4.html">п.5.4.Организовать коммуникационную/ диалоговую площадку между научным и бизнес сообществами</a>
+                </li>
+                    <li>
+                    <a href="5.5.html">п.5.5.Предложения по улучшению общественного понимания науки</a>
+                </li>
+            </ul>
+        </li>
+        
+         <li>
+            <a href="#">Заключение</a>
+            <input type="checkbox" class="subCat" id="6" />
+            <label class="chka" for="6"></label>
+           
+        </li>
+         <li>
+            <a href="#">Список использованной литературы</a>
+            <input type="checkbox" class="subCat" id="7" />
+            <label class="chka" for="7"></label>
+            
+        </li>
+         <li>
+            <a href="#">Приложения</a>
+            <input type="checkbox" class="subCat" id="8" />
+            <label class="chka" for="8"></label>
+            
+        </li>
+        </ul>
+</div>
+</div>
+
+
+
+    <div class="header"> 
+  <h3>  Қазақстан Республикасы Президентінің жанындағы Қазақстан Республикасының Ұлттық ғылым академиясы</h3>
+      <p></p>
+  <h3 style="color:#024186">Отчет по бюджетной программе 217 «Развитие науки» по подпрограмме 104 «Услуги по информационно-аналитическому сопровождению науки» <br/>по специфике 159 «Оплата прочих услуг и работ» согласно Договору о государственных закупках услуг №061140007608/230035/00 от 24.08.2023 года </h3>
+</div>
+    
+<div class="row"> 
+
+
+
+
+<div class="main">
+
+    <div class="leftcolumn">
+   
+        <div class="card">
+
+
 
 <div class=WordSection1>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><a
-name=âîïðîñû15><b><span lang=KZ>1.5 Àíàëèç óðîâíÿ òåõíîëîãè÷åñêîé ãîòîâíîñòè
-(TRL) íàó÷íûõ îðãàíèçàöèé è èññëåäîâàòåëüñêèõ óíèâåðñèòåòîâ ïî èõ ðàçðàáîòêàì</span></b></a></p>
+name=вопросы15><b><span lang=KZ>1.5 Анализ уровня технологической готовности
+(TRL) научных организаций и исследовательских университетов по их разработкам</span></b></a></p>
 
 <p class=MsoNormal style='text-indent:35.45pt'><b>&nbsp;</b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Íàöèîíàëüíàÿ àêàäåìèÿ íàóê Ðåñïóáëèêè Êàçàõñòàí ïðè Ïðåçèäåíòå
-Ðåñïóáëèêè Êàçàõñòàí â öåëÿõ èçó÷åíèÿ </span>íàó÷íîãî ïîòåíöèàëà íàó÷íûõ îðãàíèçàöèé
-ïðîâåëà àíàëèç ïîëó÷åííîé èíôîðìàöèè îò ïîäâåäîìñòâåííû<span lang=KZ>õ</span>
-íàó÷íû<span lang=KZ>õ</span> îðãàíèçàöèé îòðàñëåâûõ ãîñóäàðñòâåííûõ îðãàíîâ,
-âêëþ÷àÿ äî÷åðíèå è ñòðóêòóðíûå èíñòèòóòû îðãàíèçàöèé âûñøåãî è ïîñëåâóçîâñêîãî
-îáðàçîâàíèÿ <i>(ÌÍÂÎ</i><i><span lang=KZ> ÐÊ, ÌÖÐÈÀÏ ÐÊ, ÌÇ ÐÊ, ÌÑÕ ÐÊ, ÌÝÏÐ
-ÐÊ, ÌÝ ÐÊ, ÌÈÈÐ ÐÊ è äð</span>.)</i><i><span lang=KZ>.</span></i></p>
+lang=KZ>Национальная академия наук Республики Казахстан при Президенте
+Республики Казахстан в целях изучения </span>научного потенциала научных организаций
+провела анализ полученной информации от подведомственны<span lang=KZ>х</span>
+научны<span lang=KZ>х</span> организаций отраслевых государственных органов,
+включая дочерние и структурные институты организаций высшего и послевузовского
+образования <i>(МНВО</i><i><span lang=KZ> РК, МЦРИАП РК, МЗ РК, МСХ РК, МЭПР
+РК, МЭ РК, МИИР РК и др</span>.)</i><i><span lang=KZ>.</span></i></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Öåëü èññëåäîâàíèÿ – îöåíèòü:</span></p>
+lang=KZ>Цель исследования – оценить:</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- êàäðîâûé ïîòåíöèàë íàó÷íûõ ó÷ðåæäåíèé;</span></p>
+lang=KZ>- кадровый потенциал научных учреждений;</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- </span>àêòóàëüíîñòü è ïåðñïåêòèâíîñòü íàó÷íûõ èññëåäîâàíèé; </p>
+lang=KZ>- </span>актуальность и перспективность научных исследований; </p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- </span>ðåçóëüòàòèâíîñòü íàó÷íî-òåõíè÷åñêîé äåÿòåëüíîñòè (ÍÒÄ); </p>
+lang=KZ>- </span>результативность научно-технической деятельности (НТД); </p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- </span>êîììåðöèàëèçàöèþ ðåçóëüòàòîâ èññëåäîâàíèé è ðàçðàáîòîê<span
+lang=KZ>- </span>коммерциализацию результатов исследований и разработок<span
 lang=KZ>;</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- âõîæäåíèå â ðåéòèíãè ýêñïåðòíûõ öåíòðîâ;</span></p>
+lang=KZ>- вхождение в рейтинги экспертных центров;</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- äåÿòåëüíîñòü ÍÈÈ è ÍÖ, ïðîâåäåííóþ óïîëíîìî÷åííûì îðãàíîì â ñôåðå
-íàóêè.</span></p>
+lang=KZ>- деятельность НИИ и НЦ, проведенную уполномоченным органом в сфере
+науки.</span></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ðàçâèòèå
-íàóêè ÿâëÿåòñÿ îäíèì èç ñòðàòåãè÷åñêèõ ïðèîðèòåòîâ äëÿ îáåñïå÷åíèÿ íàöèîíàëüíîé
-áåçîïàñíîñòè è äîñòèæåíèÿ íîâîãî êà÷åñòâà íàó÷íî-òåõíîëîãè÷åñêîãî è
-ýêîíîìè÷åñêîãî ðàçâèòèÿ ñòðàíû. </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Развитие
+науки является одним из стратегических приоритетов для обеспечения национальной
+безопасности и достижения нового качества научно-технологического и
+экономического развития страны. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Äëÿ
-ïðîâåäåíèÿ àíàëèçà áûëè ïðåäñòàâëåíû àííîòàöèîííûå îò÷åòû îò <span lang=KZ>51</span>
-íàó÷í<span lang=KZ>îé</span> îðãàíèçàöè<span lang=KZ>è</span> (ïðèëîæåíèå 1.5.1).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Для
+проведения анализа были представлены аннотационные отчеты от <span lang=KZ>51</span>
+научн<span lang=KZ>ой</span> организаци<span lang=KZ>и</span> (приложение 1.5.1).</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Àíàëèç
-ïîêàçàë, ÷òî <span lang=KZ>íàó÷íûå îðãàíèçàöèè: </span><span lang=KZ> </span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- îáëàäàþò íåîáõîäèìûì êàäðîâûì è íàó÷íûì ïîòåíöèàëîì;</span></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Анализ
+показал, что <span lang=KZ>научные организации: </span><span lang=KZ> </span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ðóêîâîäñòâóþòñÿ àêòóàëüíûìè è ïåðñïåêòèâíûìè ïðèîðèòåòíûìè
-íàïðàâëåíèÿìè í</span>àó÷íûõ èññëåäîâàíèé<span lang=KZ>, êîòîðûå ñîîòâåòñòâóþò
-îñíîâíûì ïðèîðèòåòíûì íàïðàâëåíèÿì íàóêè, îïðåäåëåííûì ÂÍÒÊ ïðè Ïðàâèòåëüñòâå
-ÐÊ;</span></p>
+lang=KZ>- обладают необходимым кадровым и научным потенциалом;</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- äîáèâàþòñÿ ð</span>åçóëüòàòèâíîñò<span lang=KZ>è</span>
-íàó÷íî-òåõíè÷åñêîé äåÿòåëüíîñòè<span lang=KZ>, î ÷åì ñâèäåòåëüñòâóþò ïó</span>áëèêàöèè,
-èíäåêñèðóåìû<span lang=KZ>å</span> â àâòîðèòåòíûõ çàðóáåæíûõ ðåñóðñàõ è
-îòå÷åñòâåííûõ æóðíàëàõ, à òàêæå ìîíîãðàôèè, ó÷åáíèêè, ó÷åáíû<span lang=KZ>å</span>
-ïîñîáèÿ;</p>
+lang=KZ>- руководствуются актуальными и перспективными приоритетными
+направлениями н</span>аучных исследований<span lang=KZ>, которые соответствуют
+основным приоритетным направлениям науки, определенным ВНТК при Правительстве
+РК;</span></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>          -<span
-lang=KZ> îñóùåñòâëÿþò </span>êîììåðöèàëèçàöè<span lang=KZ>þ</span> ðåçóëüòàòîâ
-èññëåäîâàíèé è ðàçðàáîòîê.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>- добиваются р</span>езультативност<span lang=KZ>и</span>
+научно-технической деятельности<span lang=KZ>, о чем свидетельствуют пу</span>бликации,
+индексируемы<span lang=KZ>е</span> в авторитетных зарубежных ресурсах и
+отечественных журналах, а также монографии, учебники, учебны<span lang=KZ>е</span>
+пособия;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Áàçà äàííûõ
-âêëþ÷àåò 51 îðãàíèçàöèþ, êîòîðûå ïðèíàäëåæàò ê 7 ìèíèñòåðñòâàì. Íàèáîëüøàÿ èõ
-÷àñòü íàõîäèòñÿ â âåäåíèè Ìèíèñòåðñòâà çäðàâîîõðàíåíèÿ – 20, Ìèíèñòåðñòâà
-ñåëüñêîãî õîçÿéñòâà – 17. Ê Ìèíèñòåðñòâó öèôðîâîãî ðàçâèòèÿ, èííîâàöèé è
-àýðîêîñìè÷åñêîé ïðîìûøëåííîñòè îòíîñÿòñÿ 7 îðãàíèçàöèé, Ìèíèñòåðñòâó
-ïðîìûøëåííîñòè è ñòðîèòåëüñòâà – 3, Ìèíèñòåðñòâó ýêîëîãèè è ïðèðîäíûõ ðåñóðñîâ
-– 2, Ìèíèñòåðñòâó òðàíñïîðòà – 1, Ìèíèñòåðñòâó âîäíûõ ðåñóðñîâ è èððèãàöèè – 1 îðãàíèçàöèÿ
-(Ðèñ. 1<span lang=KZ>.5.1</span>).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>          -<span
+lang=KZ> осуществляют </span>коммерциализаци<span lang=KZ>ю</span> результатов
+исследований и разработок.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>База данных
+включает 51 организацию, которые принадлежат к 7 министерствам. Наибольшая их
+часть находится в ведении Министерства здравоохранения – 20, Министерства
+сельского хозяйства – 17. К Министерству цифрового развития, инноваций и
+аэрокосмической промышленности относятся 7 организаций, Министерству
+промышленности и строительства – 3, Министерству экологии и природных ресурсов
+– 2, Министерству транспорта – 1, Министерству водных ресурсов и ирригации – 1 организация
+(Рис. 1<span lang=KZ>.5.1</span>).</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><img
 width=510 height=407 src="1.5.files/image001.png" align=left hspace=12></p>
@@ -210,53 +699,51 @@ text-indent:35.45pt'>&nbsp;</p>
 text-indent:35.45pt'>&nbsp;</p>
 
 <p class=MsoNormal align=center style='margin-right:-7.15pt;text-align:center;
-text-indent:35.45pt'>Ðèñóíîê 1.5.<span lang=KZ>1</span> Ïðèíàäëåæíîñòü íàó÷íûõ
-îðãàíèçàöèé ïî ìèíèñòåðñòâàì</p>
+text-indent:35.45pt'>Рисунок 1.5.<span lang=KZ>1</span> Принадлежность научных
+организаций по министерствам</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Àíàëèç
-ïîêàçûâàåò, ÷òî íàèáîëåå âûñîêàÿ îñòåïåíåííîñòü â íàó÷íûõ îðãàíèçàöèÿõ
-Ìèíèñòåðñòâà ïðîìûøëåííîñòè è ñòðîèòåëüñòâà (3 îðãàíèçàöèè) – 40,6%,
-Ìèíèñòåðñòâà ñåëüñêîãî õîçÿéñòâà (17) – 38,1%. </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Анализ
+показывает, что наиболее высокая остепененность в научных организациях
+Министерства промышленности и строительства (3 организации) – 40,6%,
+Министерства сельского хозяйства (17) – 38,1%. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Â íàó÷íûõ
-îðãàíèçàöèÿõ Ìèíèñòåðñòâà çäðàâîîõðàíåíèÿ (20) îñòåïåíåííîñòü ñîñòàâèëà 28,6%,
-Ìèíèñòåðñòâà âîäíûõ ðåñóðñîâ è èððèãàöèè (1) – 26,8%%, Ìèíèñòåðñòâà öèôðîâîãî
-ðàçâèòèÿ, èííîâàöèé è àýðîêîñìè÷åñêîé ïðîìûøëåííîñòè (7) – 25,7%, Ìèíèñòåðñòâà
-ýêîëîãèè è ïðèðîäíûõ ðåñóðñîâ (2) – 23,4%. </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>В научных
+организациях Министерства здравоохранения (20) остепененность составила 28,6%,
+Министерства водных ресурсов и ирригации (1) – 26,8%%, Министерства цифрового
+развития, инноваций и аэрокосмической промышленности (7) – 25,7%, Министерства
+экологии и природных ресурсов (2) – 23,4%. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñàìàÿ íèçêàÿ
-îñòåïåíåííîñòü ïî Ìèíèñòåðñòâó òðàíñïîðòà (1) – 6,5%.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Самая низкая
+остепененность по Министерству транспорта (1) – 6,5%.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íàèáîëåå
-âûñîêîãî óðîâíÿ äîñòèãëè îðãàíèçàöèè ÌÑÕ ÐÊ. Èç 17 îðãàíèçàöèé 8 äîñòèãëè
-TRL-9, 6 - TRL-8 è 1 - TRL-7.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Наиболее
+высокого уровня достигли организации МСХ РК. Из 17 организаций 8 достигли
+TRL-9, 6 - TRL-8 и 1 - TRL-7.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ïî
-Ìèíèñòåðñòâó çäðàâîîõðàíåíèÿ: <span lang=EN-US>TRL</span>-9 – 2; <span
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>По
+Министерству здравоохранения: <span lang=EN-US>TRL</span>-9 – 2; <span
 lang=EN-US>TRL</span>-8 – 3; <span lang=EN-US>TRL</span>-7 – 7; <span
-lang=EN-US>TRL</span>-6 – 3; <span lang=EN-US>TRL</span>-4 – 3 îðãàíèçàöèè.</p>
+lang=EN-US>TRL</span>-6 – 3; <span lang=EN-US>TRL</span>-4 – 3 организации.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ìèíèñòåðñòâî
-öèôðîâîãî ðàçâèòèÿ, èííîâàöèé è àýðîêîñìè÷åñêîé ïðîìûøëåííîñòè: <span
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Министерство
+цифрового развития, инноваций и аэрокосмической промышленности: <span
 lang=EN-US>TRL</span>-9 – 1; <span lang=EN-US>TRL</span>-8 – 1; <span
 lang=EN-US>TRL</span>-7 – 3; <span lang=EN-US>TRL</span>-6 – 1; <span
-lang=EN-US>TRL</span>-5 – 1 îðãàíèçàöèÿ.</p>
+lang=EN-US>TRL</span>-5 – 1 организация.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ìèíèñòåðñòâî
-ïðîìûøëåííîñòè è ñòðîèòåëüñòâà: TRL-9 – 1, TRL-8 – 1 îðãàíèçàöèÿ. </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Министерство
+промышленности и строительства: TRL-9 – 1, TRL-8 – 1 организация. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ìèíèñòåðñòâî
-ýêîëîãèè è ïðèðîäíûõ ðåñóðñîâ: TRL-9 – 2 îðãàíèçàöèè.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Министерство
+экологии и природных ресурсов: TRL-9 – 2 организации.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ìèíèñòåðñòâî
-âîäíûõ ðåñóðñîâ è èððèãàöèè: TRL-9 – 1 îðãàíèçàöèÿ.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Министерство
+водных ресурсов и ирригации: TRL-9 – 1 организация.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ìèíèñòåðñòâî
-òðàíñïîðòà: TRL-7 – 1 îðãàíèçàöèÿ.</p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Министерство
+транспорта: TRL-7 – 1 организация.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
 
@@ -266,287 +753,289 @@ lang=EN-US>TRL</span>-5 – 1 îðãàíèçàöèÿ.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Ìèíèñòåðñòâî
-çäðàâîîõðàíåíèÿ: </b></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Министерство
+здравоохранения: </b></p>
 
 <p class=MsoNormal style='text-align:justify'><img width=778 height=385
-id="Ðèñóíîê 2" src="1.5.files/image002.jpg"></p>
+id="Рисунок 2" src="1.5.files/image002.jpg"></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Óðîâåíü TRL-9
-– ÊàçÍÈÂÈ, ÐÊÌ</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Уровень TRL-9
+– КазНИВИ, РКМ</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-8 –
-ÍÍÈÏÁÁ, ÍÖÁ, ÍÍÖÎÎÈ</p>
+ННИПББ, НЦБ, ННЦООИ</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-7 –
-ÍÍÖÒÎ, ÍÍÖÐÇ, ÍÏÖÒ, ÍÈÈÊèÂÁ, ÍÖÀÃèÏ, ÍÖÏèÄÕ, ÊàçÍÈÈÎèÐ</p>
+ННЦТО, ННЦРЗ, НПЦТ, НИИКиВБ, НЦАГиП, НЦПиДХ, КазНИИОиР</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-6 – ÍÍÎÖ,
-ÐÍÏÏÇ, ÍÖÏÏ</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-6 – ННОЦ,
+РНППЗ, НЦПП</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-4 ÍÍÖÔ,
-ÍÖÎÇ, ÊÍÖÄèÇ</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-4 ННЦФ,
+НЦОЗ, КНЦДиЗ</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íàèáîëåå
-âûñîêàÿ îñòåïåíåííîñòü â ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé íàó÷íûé öåíòð òðàâìàòîëîãèè è
-îðòîïåäèè èìåíè àêàäåìèêà Áàòïåíîâà Í.Ä.» - 77,8%.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Наиболее
+высокая остепененность в РГП на ПХВ «Национальный научный центр травматологии и
+ортопедии имени академика Батпенова Н.Д.» - 77,8%.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Â ÀÎ «Íàó÷íûé
-öåíòð ïåäèàòðèè è äåòñêîé õèðóðãèè» - 70%, ÐÃÏ íà ÏÕÂ «Ðåñïóáëèêàíñêèé
-íàó÷íî-ïðàêòè÷åñêèé öåíòð ïñèõè÷åñêîãî çäîðîâüÿ» - 66,7%, ÐÃÏ íà ÏÕÂ «Êàçàõñêèé
-íàó÷íûé öåíòð äåðìàòîëîãèè è èíôåêöèîííûõ çàáîëåâàíèé» - 62,5%, ÀÎ «Êàçàõñêèé
-íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò îíêîëîãèè è ðàäèîëîãèè» - 60,7%, ÒÎÎ
-«Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé âåòåðèíàðíûé èíñòèòóò» - 59,7%, ÐÃÏ íà ÏÕÂ
-«Íàöèîíàëüíûé íàó÷íûé öåíòð îñîáî îïàñíûõ èíôåêöèé èì. Ì.Àéêèìáàåâà» - 58,5%,
-ÐÃÏ íà ÏÕÂ &quot;Íàöèîíàëüíûé íàó÷íûé öåíòð ðàçâèòèÿ çäðàâîîõðàíåíèÿ èìåíè Ñàëèäàò
-Êàèðáåêîâîé&quot; - 54,5%, ÒÎÎ «Íàöèîíàëüíûé Íàó÷íûé Îíêîëîãè÷åñêèé Öåíòð»  -
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>В АО «Научный
+центр педиатрии и детской хирургии» - 70%, РГП на ПХВ «Республиканский
+научно-практический центр психического здоровья» - 66,7%, РГП на ПХВ «Казахский
+научный центр дерматологии и инфекционных заболеваний» - 62,5%, АО «Казахский
+научно-исследовательский институт онкологии и радиологии» - 60,7%, ТОО
+«Казахский научно-исследовательский ветеринарный институт» - 59,7%, РГП на ПХВ
+«Национальный научный центр особо опасных инфекций им. М.Айкимбаева» - 58,5%,
+РГП на ПХВ &quot;Национальный научный центр развития здравоохранения имени Салидат
+Каирбековой&quot; - 54,5%, ТОО «Национальный Научный Онкологический Центр»  -
 52,4%.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íå âûñîêàÿ
-îñòåïåíåííîñòü â ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé íàó÷íûé öåíòð ôòèçèîïóëüìîíîëîãèè» -
-43,2%, ÒÎÎ «Ðåñïóáëèêàíñêàÿ êîëëåêöèÿ ìèêðîîðãàíèçìîâ» - 33,3%, ÐÃÏ íà ÏÕÂ
-«Íàöèîíàëüíûé Ïðîèçâîäñòâåííûé Öåíòð Òðàíñôóçèîëîãèè» - 28%, ÒÎÎ «Íàöèîíàëüíûé
-öåíòð áèîòåõíîëîãèè» - 26,8%, ÀÎ «Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò êàðäèîëîãèè
-è âíóòðåííèõ áîëåçíåé» - 25%</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Не высокая
+остепененность в РГП на ПХВ «Национальный научный центр фтизиопульмонологии» -
+43,2%, ТОО «Республиканская коллекция микроорганизмов» - 33,3%, РГП на ПХВ
+«Национальный Производственный Центр Трансфузиологии» - 28%, ТОО «Национальный
+центр биотехнологии» - 26,8%, АО «Научно-исследовательский институт кардиологии
+и внутренних болезней» - 25%</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñàìàÿ íèçêàÿ
-îñòåïåíåííîñòü â ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé öåíòð îáùåñòâåííîãî çäðàâîîõðàíåíèÿ»
-- 21%, ÀÎ «Íàó÷íûé öåíòð ïðîòèâîèíôåêöèîííûõ ïðåïàðàòîâ» - 19,8%, ÐÃÏ
-«Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì áèîëîãè÷åñêîé áåçîïàñíîñòè» - 14,2%,
-ÀÎ «Íàó÷íûé öåíòð àêóøåðñòâà, ãèíåêîëîãèè è ïåðèíàòîëîãèè» - 5,6%, ÒÎÎ
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Самая низкая
+остепененность в РГП на ПХВ «Национальный центр общественного здравоохранения»
+- 21%, АО «Научный центр противоинфекционных препаратов» - 19,8%, РГП
+«Научно-исследовательский институт проблем биологической безопасности» - 14,2%,
+АО «Научный центр акушерства, гинекологии и перинатологии» - 5,6%, ТОО
 «OtarBioPharm» - 1,9%. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Äàííûå ïî ÀÎ
-«Íàöèîíàëüíûé öåíòð íåéðîõèðóðãèè» ïðåäñòàâëåíû íå ïîëíîñòüþ.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Данные по АО
+«Национальный центр нейрохирургии» представлены не полностью.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b> Ìèíèñòåðñòâî
-ñåëüñêîãî õîçÿéñòâà:</b></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b> Министерство
+сельского хозяйства:</b></p>
 
 <p class=MsoNormal style='text-align:justify'><img width=780 height=390
-id="Ðèñóíîê 1" src="1.5.files/image003.jpg"></p>
+id="Рисунок 1" src="1.5.files/image003.jpg"></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Óðîâåíü TRL-9
-– ÍÏÖÇÕ, ÂÊÑÕÎÑ, ÊàçÍÈÈÇèÐ, ÊàçÍÈÈÏÏÏ, Àêòþáèíñêàÿ ÑÕÎÑ, ÑÊÍÈÈÑÕ, ÊàçÍÈÈÇèÊÐ,
-ÑÕÎÑ ÕèÁ.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Уровень TRL-9
+– НПЦЗХ, ВКСХОС, КазНИИЗиР, КазНИИППП, Актюбинская СХОС, СКНИИСХ, КазНИИЗиКР,
+СХОС ХиБ.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-8 –
-ÊàçõÍÈÈÝÀÏÊèÐÑÒ, ÞÇÍÈÈÆèÐ, ÊàçÍÈÈÆèÊ, Êàðàãàíäèíñêàÿ ÑÕÎÑ, ÊàçÍÈÈÏÎ,
-Êðàñíîâîäîïàäñêàÿ ÑÕÎÑ.</p>
+КазхНИИЭАПКиРСТ, ЮЗНИИЖиР, КазНИИЖиК, Карагандинская СХОС, КазНИИПО,
+Красноводопадская СХОС.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-7 –
-ÊàçÍÈÈÏÀ. </p>
+КазНИИПА. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñðåäè íàó÷íûõ
-îðãàíèçàöèé ÌÑÕ ñàìàÿ âûñîêàÿ îñòåïåíåííîñòü â ÒÎÎ «Êàçàõñêèé ÍÈÈ çåìëåäåëèÿ è
-ðàñòåíèåâîäñòâà» - 55,1%, ÒÎÎ «Íàó÷íî-ïðîèçâîäñòâåííûé öåíòð çåðíîâîãî
-õîçÿéñòâà èì. À.È. Áàðàåâà» - 54,3%, ÒÎÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé
-èíñòèòóò ïî÷âîâåäåíèÿ è àãðîõèìèè èì.Ó.Ó. Óñïàíîâà» - 54,2%, ÒÎÎ «Àêòþáèñêàÿ
-ñåëüñêîõîçÿéñòâåííàÿ îïûòíàÿ ñòàíöèÿ» - 50%, ÒÎÎ «Âîñòî÷íî-Êàçàõñòàíñêàÿ
-ñåëüñêîõîçÿéñòâåííàÿ îïûòíàÿ ñòàíöèÿ» - 50%, ÒÎÎ «Þãî-Çàïàäíûé
-íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò æèâîòíîâîäñòâà è ðàñòåíèåâîäñòâà - 46,9%, </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Среди научных
+организаций МСХ самая высокая остепененность в ТОО «Казахский НИИ земледелия и
+растениеводства» - 55,1%, ТОО «Научно-производственный центр зернового
+хозяйства им. А.И. Бараева» - 54,3%, ТОО «Казахский научно-исследовательский
+институт почвоведения и агрохимии им.У.У. Успанова» - 54,2%, ТОО «Актюбиская
+сельскохозяйственная опытная станция» - 50%, ТОО «Восточно-Казахстанская
+сельскохозяйственная опытная станция» - 50%, ТОО «Юго-Западный
+научно-исследовательский институт животноводства и растениеводства - 46,9%, </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Â ÒÎÎ
-«Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïëîäîîâîùåâîäñòâà îñòåïåíåííîñòü
-ñîñòàâëÿåò 39,4%, ÒÎÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò æèâîòíîâîäñòâà
-è êîðìîïðîèçâîäñòâà» - 38,9%, ÒÎÎ «Ñåâåðî-Êàçàõñòàíñêèé
-íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ñåëüñêîãî õîçÿéñòâà» - 35%, ÒÎÎ «Êàçàõñêèé
-íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïåðåðàáàòûâàþùåé è ïèùåâîé ïðîìûøëåííîñòè» -
-32%, ÒÎÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò çàùèòû è êàðàíòèíà
-ðàñòåíèé èìåíè Æ. Æèåìáàåâà» - 29%, ÒÎÎ «Êðàñíîâîäîïàäñêàÿ ñåëüñêîõîçÿéñòâåííàÿ
-îïûòíàÿ ñòàíöèÿ» - 25%, ÒÎÎ «Êàðàãàíäèíñêàÿ ñåëüñêîõîçÿéñòâåííàÿ îïûòíàÿ
-ñòàíöèÿ èìåíè À.Ô.Õðèñòåíêî» - 20%.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>В ТОО
+«Казахский научно-исследовательский институт плодоовощеводства остепененность
+составляет 39,4%, ТОО «Казахский научно-исследовательский институт животноводства
+и кормопроизводства» - 38,9%, ТОО «Северо-Казахстанский
+научно-исследовательский институт сельского хозяйства» - 35%, ТОО «Казахский
+научно-исследовательский институт перерабатывающей и пищевой промышленности» -
+32%, ТОО «Казахский научно-исследовательский институт защиты и карантина
+растений имени Ж. Жиембаева» - 29%, ТОО «Красноводопадская сельскохозяйственная
+опытная станция» - 25%, ТОО «Карагандинская сельскохозяйственная опытная
+станция имени А.Ф.Христенко» - 20%.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñàìàÿ íèçêàÿ
-îñòåïåíåííîñòü â ÒÎÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ýêîíîìèêè ÀÏÊ
-è ðàçâèòèÿ ñåëüñêèõ òåððèòîðèé» - 15%, ÒÎÎ «Ñåëüñêîõîçÿéñòâåííàÿ îïûòíàÿ
-ñòàíöèÿ õëîïêîâîäñòâà è áàõ÷åâîäñòâà» - 11,4%. </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Самая низкая
+остепененность в ТОО «Казахский научно-исследовательский институт экономики АПК
+и развития сельских территорий» - 15%, ТОО «Сельскохозяйственная опытная
+станция хлопководства и бахчеводства» - 11,4%. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ïî ÒÎÎ
-«Ïàâëîäàðñêàÿ ñåëüñêîõîçÿéñòâåííàÿ îïûòíàÿ ñòàíöèÿ» è ÒÎÎ «Êàðàáàëûêñêàÿ
-ñåëüñêîõîçÿéñòâåííàÿ îïûòíàÿ ñòàíöèÿ» äàííûå íå ïðåäñòàâëåíû.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>По ТОО
+«Павлодарская сельскохозяйственная опытная станция» и ТОО «Карабалыкская
+сельскохозяйственная опытная станция» данные не представлены.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
 <p class=MsoNormal style='text-align:justify'><img width=778 height=383
-id="Ðèñóíîê 3" src="1.5.files/image004.jpg"></p>
+id="Рисунок 3" src="1.5.files/image004.jpg"></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ìèíèñòåðñòâî
-öèôðîâîãî ðàçâèòèÿ, èííîâàöèé è àýðîêîñìè÷åñêîé ïðîìûøëåííîñòè: </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Министерство
+цифрового развития, инноваций и аэрокосмической промышленности: </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-9 – ÈÊÒÒ</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-9 – ИКТТ</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-8 – ÍÖÊÈÒ</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-8 – НЦКИТ</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-7 –
-Èîíîñôåðà, Ghalam, ÊàçÊîñìîñ</p>
+Ионосфера, Ghalam, КазКосмос</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-6 – ÀÔÈÔ </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-6 – АФИФ </p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-5 -
-Èíôðàêîñ.</p>
+Инфракос.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñàìàÿ âûñîêàÿ
-îñòåïåíåííîñòü ñðåäè íàó÷íûõ îðãàíèçàöèé ÌÖÐÈÀÏ â ÒÎÎ «Èíñòèòóò èîíîñôåðû» -
-46%, ÒÎÎ «Àñòðîôèçè÷åñêèé èíñòèòóò èìåíè Â.Ã. Ôåñåíêîâà» - 33,3%, ÀÎ
-&quot;Íàöèîíàëüíûé öåíòð êîñìè÷åñêèõ èññëåäîâàíèé è òåõíîëîãèé&quot; - 32,5%,
-ÄÒÎÎ «Èíñòèòóò êîñìè÷åñêîé òåõíèêè è òåõíîëîãèé» - 29,2%.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Самая высокая
+остепененность среди научных организаций МЦРИАП в ТОО «Институт ионосферы» -
+46%, ТОО «Астрофизический институт имени В.Г. Фесенкова» - 33,3%, АО
+&quot;Национальный центр космических исследований и технологий&quot; - 32,5%,
+ДТОО «Институт космической техники и технологий» - 29,2%.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñàìàÿ íèçêàÿ
-îñòåïåíåííîñòü â Íàöèîíàëüíîé êîìïàíèè «Êàçêîñìîñ» - 7,7%, ÒÎÎ «Ghalam» - 13%,
-ÐÃÏ «Èíôðàêîñ» - 16,1%.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Самая низкая
+остепененность в Национальной компании «Казкосмос» - 7,7%, ТОО «Ghalam» - 13%,
+РГП «Инфракос» - 16,1%.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Ìèíèñòåðñòâî
-ïðîìûøëåííîñòè è ñòðîèòåëüñòâà: </b></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Министерство
+промышленности и строительства: </b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-9 –
-ÍÖÊÏÌÑ </p>
+НЦКПМС </p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-8 –
-R&amp;D ÖÊÈ</p>
+R&amp;D ЦКИ</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñàìàÿ âûñîêàÿ
-îñòåïåíåííîñòü â ÐÃÏ «Íàöèîíàëüíûé öåíòð ïî êîìïëåêñíîé ïåðåðàáîòêå
-ìèíåðàëüíîãî ñûðüÿ» - 44,2%, ñàìàÿ íèçêàÿ – â ÒÎÎ «Research&amp;Development
-öåíòð «Êàçàõñòàí èíæèíèðèíã» - 16,1%.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Самая высокая
+остепененность в РГП «Национальный центр по комплексной переработке
+минерального сырья» - 44,2%, самая низкая – в ТОО «Research&amp;Development
+центр «Казахстан инжиниринг» - 16,1%.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ïî ÀÎ
-&quot;Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé è ïðîåêòíûé èíñòèòóò ñòðîèòåëüñòâà è
-àðõèòåêòóðû&quot; ïîëíûå äàííûå íå ïðåäñòàâëåíû.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>По АО
+&quot;Казахский научно-исследовательский и проектный институт строительства и
+архитектуры&quot; полные данные не представлены.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Ìèíèñòåðñòâî
-ýêîëîãèè è ïðèðîäíûõ ðåñóðñîâ: </b></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Министерство
+экологии и природных ресурсов: </b></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-9 – ÈÁÔ,
-ÍÏÖÐÕ </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-9 – ИБФ,
+НПЦРХ </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Â
-îðãàíèçàöèÿõ ÌÝÏÐ îñòåïåíåííîñòü íå âûñîêàÿ – â ÐÃÏ íà ÏÕÂ «Èíñòèòóò áîòàíèêè è
-ôèòîèíòðîäóêöèè» - 28,1%, ÒÎÎ «Íàó÷íî-ïðîèçâîäñòâåííûé öåíòð ðûáíîãî õîçÿéñòâà»
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>В
+организациях МЭПР остепененность не высокая – в РГП на ПХВ «Институт ботаники и
+фитоинтродукции» - 28,1%, ТОО «Научно-производственный центр рыбного хозяйства»
 - 16,7%.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Ìèíèñòåðñòâî
-âîäíûõ ðåñóðñîâ è èððèãàöèè: </b></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Министерство
+водных ресурсов и ирригации: </b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-9 –
-ÊàçÍÈÈÂÕ</p>
+КазНИИВХ</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Â ÒÎÎ
-«Êàçàõñêèé íàó÷íî – èññëåäîâàòåëüñêèé èíñòèòóò âîäíîãî õîçÿéñòâà»
-îñòåïåíåííîñòü ñîñòàâëÿåò 26,8%.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>В ТОО
+«Казахский научно – исследовательский институт водного хозяйства»
+остепененность составляет 26,8%.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Ìèíèñòåðñòâî
-òðàíñïîðòà: </b></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Министерство
+транспорта: </b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>TRL-7 -
-ÊàçÄîðÍÈÈ </p>
+КазДорНИИ </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Â ÀÎ
-«Êàçàõñòàíñêèé äîðîæíûé íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò» îñòåïåíåííîñòü
-íèçêàÿ - 6,5 %.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>В АО
+«Казахстанский дорожный научно-исследовательский институт» остепененность
+низкая - 6,5 %.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
-lang=KZ>1.5.1 Íàó÷íûé ïîòåíöèàë îðãàíèçàöèé</span></b></p>
+lang=KZ>1.5.1 Научный потенциал организаций</span></b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
 lang=KZ>&nbsp;</span></b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
-lang=KZ>Êàäðîâûé ïîòåíöèàë, êâàëèôèêàöèÿ íàó÷íûõ êàäðîâ</span></b></p>
+lang=KZ>Кадровый потенциал, квалификация научных кадров</span></b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>1.
-Íàó÷íî-èññëåäîâàòåëüñêèå îðãàíèçàöèè îáëàäàþò íåîáõîäèìûì <b>êàäðîâûì
-ïîòåíöèàëîì</b> äëÿ âûïîëíåíèÿ ÍÈÎÊÐ: èìåþò äîñòàòî÷íîå êîëè÷åñòâî äîêòîðîâ,
-êàíäèäàòîâ íàóê, äîêòîðîâ <span lang=EN-US>PhD</span><span lang=KZ> è äðóãèõ
-íàó÷íûõ ñîòðóäíèêîâ.</span></p>
+Научно-исследовательские организации обладают необходимым <b>кадровым
+потенциалом</b> для выполнения НИОКР: имеют достаточное количество докторов,
+кандидатов наук, докторов <span lang=EN-US>PhD</span><span lang=KZ> и других
+научных сотрудников.</span></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íàèáîëåå
-êðóïíûìè íàó÷íûìè îðãàíèçàöèÿìè ÿâëÿþòñÿ: ÒÎÎ «Íàöèîíàëüíûé Íàó÷íûé
-Îíêîëîãè÷åñêèé Öåíòð» - øòàòíàÿ ÷èñëåííîñòü ñîñòàâëÿåò 1073 ÷åë., ÀÎ «Íàó÷íûé
-öåíòð ïåäèàòðèè è äåòñêîé õèðóðãèè» - 906 ÷åë., ÐÃÏ íà ÏÕÂ &quot;Íàöèîíàëüíûé
-íàó÷íûé öåíòð ðàçâèòèÿ çäðàâîîõðàíåíèÿ èìåíè Ñàëèäàò Êàèðáåêîâîé&quot; - 677
-÷åë., ÐÃÏ «Íàöèîíàëüíûé öåíòð ïî êîìïëåêñíîé ïåðåðàáîòêå ìèíåðàëüíîãî ñûðüÿ Ðåñïóáëèêè
-Êàçàõñòàí» - 639 ÷åë., ÀÎ Íàó÷íûé öåíòð àêóøåðñòâà, ãèíåêîëîãèè è
-ïåðèíàòîëîãèè» - 460 ÷åë., ÐÃÏ íà ÏÕÂ «Èíñòèòóò áîòàíèêè è ôèòîèíòðîäóêöèè» -
-420 ÷åë., <span lang=KZ>ÒÎÎ «Íàöèîíàëüíûé öåíòð áèîòåõíîëîãèè» - 324 ÷åë.,</span><span
-lang=KZ> </span>ÒÎÎ «Êàçàõñêèé ÍÈÈ çåìëåäåëèÿ è ðàñòåíèåâîäñòâà» - 292 ÷åë., ÐÃÏ
-íà ÏÕÂ «Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì áèîëîãè÷åñêîé áåçîïàñíîñòè»
--285 ÷åë. (ðèñ. <span lang=KZ>1.5.</span>2, ïðèëîæåíèå 1.5.2, 1.5.3).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Наиболее
+крупными научными организациями являются: ТОО «Национальный Научный
+Онкологический Центр» - штатная численность составляет 1073 чел., АО «Научный
+центр педиатрии и детской хирургии» - 906 чел., РГП на ПХВ &quot;Национальный
+научный центр развития здравоохранения имени Салидат Каирбековой&quot; - 677
+чел., РГП «Национальный центр по комплексной переработке минерального сырья Республики
+Казахстан» - 639 чел., АО Научный центр акушерства, гинекологии и
+перинатологии» - 460 чел., РГП на ПХВ «Институт ботаники и фитоинтродукции» -
+420 чел., <span lang=KZ>ТОО «Национальный центр биотехнологии» - 324 чел.,</span><span
+lang=KZ> </span>ТОО «Казахский НИИ земледелия и растениеводства» - 292 чел., РГП
+на ПХВ «Научно-исследовательский институт проблем биологической безопасности»
+-285 чел. (рис. <span lang=KZ>1.5.</span>2, приложение 1.5.2, 1.5.3).</p>
 
 <p class=MsoNormal style='text-align:justify'><img width=805 height=487
-id="Ðèñóíîê 4" src="1.5.files/image005.png"></p>
+id="Рисунок 4" src="1.5.files/image005.png"></p>
 
-<p class=MsoNormal style='text-indent:35.45pt'>Ðèñóíîê <span lang=KZ>1.5.</span>2.
-Øòàòíàÿ ÷èñëåííîñòü íàó÷íûõ îðãàíèçàöèé, ÷åë.</p>
+<p class=MsoNormal style='text-indent:35.45pt'>Рисунок <span lang=KZ>1.5.</span>2.
+Штатная численность научных организаций, чел.</p>
 
 <p class=MsoNormal style='text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Áîëüøå âñåãî
-íàó÷íûõ ñîòðóäíèêîâ ðàáîòàþò â ÀÎ «Íàó÷íûé öåíòð àêóøåðñòâà, ãèíåêîëîãèè è
-ïåðèíàòîëîãèè» (394 ÷åë.), ÐÃÏ íà ÏÕÂ «Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò
-ïðîáëåì áèîëîãè÷åñêîé áåçîïàñíîñòè» (247 ÷åë.), ÀÎ ÒÎÎ «Íàöèîíàëüíûé öåíòð
-áèîòåõíîëîãèè» (235 ÷åë.), ÐÃÏ «Íàöèîíàëüíûé öåíòð ïî êîìïëåêñíîé ïåðåðàáîòêå
-ìèíåðàëüíîãî ñûðüÿ Ðåñïóáëèêè Êàçàõñòàí» (208 ÷åë.) (ðèñ. <span lang=KZ>1.5.</span>3).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Больше всего
+научных сотрудников работают в АО «Научный центр акушерства, гинекологии и
+перинатологии» (394 чел.), РГП на ПХВ «Научно-исследовательский институт
+проблем биологической безопасности» (247 чел.), АО ТОО «Национальный центр
+биотехнологии» (235 чел.), РГП «Национальный центр по комплексной переработке
+минерального сырья Республики Казахстан» (208 чел.) (рис. <span lang=KZ>1.5.</span>3).</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><img
 width=822 height=340 src="1.5.files/image006.png" align=left hspace=12></p>
 
-<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>Ðèñóíîê
-<span lang=KZ>1.5.</span>3. ×èñëåííîñòü íàó÷íûõ ñîòðóäíèêîâ, ÷åë.</p>
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>Рисунок
+<span lang=KZ>1.5.</span>3. Численность научных сотрудников, чел.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Îñòåïåíåííîñòü.</b><b>
-</b>Êà÷åñòâåííûé ñîñòàâ ïðåäñòàâëåí ãëàâíûìè, âåäóùèìè, ñòàðøèìè, ìëàäøèìè
-íàó÷íûìè ñîòðóäíèêàìè, ëàáîðàíòàìè.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Остепененность.</b><b>
+</b>Качественный состав представлен главными, ведущими, старшими, младшими
+научными сотрудниками, лаборантами.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Âñåãî â
-ïðåäñòàâëåííûõ îðãàíèçàöèÿõ ðàáîòàåò 899 ÷åëîâåê ñ ó÷åíûìè ñòåïåíÿìè äîêòîðà,
-êàíäèäàòà íàóê, äîêòîðà <span lang=EN-US>PhD</span>. Îñòåïåíåííîñòü ñîñòàâëÿåò 30,8%
-(ïðèëîæåíèå 1.5.2).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Всего в
+представленных организациях работает 899 человек с учеными степенями доктора,
+кандидата наук, доктора <span lang=EN-US>PhD</span>. Остепененность составляет 30,8%
+(приложение 1.5.2).</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íàèáîëåå
-âûñîêàÿ îñòåïåíåííîñòü â ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé íàó÷íûé öåíòð òðàâìàòîëîãèè è
-îðòîïåäèè èìåíè àêàäåìèêà Áàòïåíîâà Í.Ä.» – 77,8%, ÐÃÏ íà ÏÕÂ «Ðåñïóáëèêàíñêèé
-íàó÷íî-ïðàêòè÷åñêèé öåíòð ïñèõè÷åñêîãî çäîðîâüÿ» - 66,7%, ÐÃÏ íà ÏÕÂ «Êàçàõñêèé
-íàó÷íûé öåíòð äåðìàòîëîãèè è èíôåêöèîííûõ çàáîëåâàíèé» – 62,5%, ÀÎ «Êàçàõñêèé
-íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò îíêîëîãèè è ðàäèîëîãèè – 60,7%, ÒÎÎ
-«Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé âåòåðèíàðíûé èíñòèòóò» - 59,7%, ÒÎÎ
-«Àñòðîôèçè÷åñêèé èíñòèòóò èìåíè Â.Ã. Ôåñåíêîâà» - 58,5%, ÒÎÎ «Çåìëåäåëèÿ è
-ðàñòåíèåâîäñòâà» - 55,1%, ÒÎÎ «Íàöèîíàëüíûé Íàó÷íûé Îíêîëîãè÷åñêèé Öåíòð» -
-52,4% (ðèñ. <span lang=KZ>1.5.</span>4). </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Наиболее
+высокая остепененность в РГП на ПХВ «Национальный научный центр травматологии и
+ортопедии имени академика Батпенова Н.Д.» – 77,8%, РГП на ПХВ «Республиканский
+научно-практический центр психического здоровья» - 66,7%, РГП на ПХВ «Казахский
+научный центр дерматологии и инфекционных заболеваний» – 62,5%, АО «Казахский
+научно-исследовательский институт онкологии и радиологии – 60,7%, ТОО
+«Казахский научно-исследовательский ветеринарный институт» - 59,7%, ТОО
+«Астрофизический институт имени В.Г. Фесенкова» - 58,5%, ТОО «Земледелия и
+растениеводства» - 55,1%, ТОО «Национальный Научный Онкологический Центр» -
+52,4% (рис. <span lang=KZ>1.5.</span>4). </p>
 
 <p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'><img
-width=782 height=321 src="1.5.files/image007.png" align=left hspace=12>Ðèñóíîê <span
-lang=KZ>1.5.</span>4. Îñòåïåíåííîñòü íàó÷íûõ îðãàíèçàöèé, %</p>
+width=782 height=321 src="1.5.files/image007.png" align=left hspace=12>Рисунок <span
+lang=KZ>1.5.</span>4. Остепененность научных организаций, %</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñàìàÿ íèçêàÿ
-îñòåïåíåííîñòü â ÒÎÎ «OtarBioPharm» (1,9%), ÀÎ «Íàó÷íûé öåíòð àêóøåðñòâà,
-ãèíåêîëîãèè è ïåðèíàòîëîãèè» (5,6%), ÀÎ «Êàçàõñòàíñêèé äîðîæíûé íàó÷íî-èññëåäîâàòåëüñêèé
-èíñòèòóò» (6,5%), ÀÎ «Íàöèîíàëüíàÿ êîìïàíèÿ «&#1178;àçà&#1179;ñòàí &#1170;àðûø
-Ñàïàðû» (7,7%).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Самая низкая
+остепененность в ТОО «OtarBioPharm» (1,9%), АО «Научный центр акушерства,
+гинекологии и перинатологии» (5,6%), АО «Казахстанский дорожный научно-исследовательский
+институт» (6,5%), АО «Национальная компания «&#1178;аза&#1179;стан &#1170;арыш
+Сапары» (7,7%).</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Ãåíäåðíîå
-ñîîòíîøåíèå</b><b><span lang=KZ>. </span></b>Â íàó÷íûõ îðãàíèçàöèÿõ ðàáîòàþò
-ïðåèìóùåñòâåííî æåíùèíû – 58,8%. Íàèáîëüøàÿ ÷èñëåííîñòü æåíùèí - â ÀÎ «Íàó÷íûé
-öåíòð ïåäèàòðèè è äåòñêîé õèðóðãèè» (88,1%), ÀÎ «Íàó÷íûé öåíòð àêóøåðñòâà,
-ãèíåêîëîãèè è ïåðèíàòîëîãèè» (87,8%), ÒÎÎ «Êàçàõñêèé ÍÈÈ ïëîäîîâîùåâîäñòâà»
-(83,1%), ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé öåíòð îáùåñòâåííîãî çäðàâîîõðàíåíèÿ» (78,3%),
-ÀÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò îíêîëîãèè è ðàäèîëîãèè (73,8%)
-(ðèñ. 5, ïðèëîæåíèå 1.5.2).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Гендерное
+соотношение</b><b><span lang=KZ>. </span></b>В научных организациях работают
+преимущественно женщины – 58,8%. Наибольшая численность женщин - в АО «Научный
+центр педиатрии и детской хирургии» (88,1%), АО «Научный центр акушерства,
+гинекологии и перинатологии» (87,8%), ТОО «Казахский НИИ плодоовощеводства»
+(83,1%), РГП на ПХВ «Национальный центр общественного здравоохранения» (78,3%),
+АО «Казахский научно-исследовательский институт онкологии и радиологии (73,8%)
+(рис. 5, приложение 1.5.2).</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><img
 width=808 height=334 src="1.5.files/image008.png" align=left hspace=12></p>
@@ -561,28 +1050,28 @@ width=808 height=334 src="1.5.files/image008.png" align=left hspace=12></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>Ðèñóíîê
-<span lang=KZ>1.5.</span>5. Ãåíäåðíîå ñîîòíîøåíèå, æåíùèíû, %</p>
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>Рисунок
+<span lang=KZ>1.5.</span>5. Гендерное соотношение, женщины, %</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íàèáîëüøåå
-êîëè÷åñòâî ìóæ÷èí - â ÒÎÎ «Ghalam» (87%), ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé íàó÷íûé
-öåíòð òðàâìàòîëîãèè è îðòîïåäèè èìåíè àêàäåìèêà Áàòïåíîâà Í.Ä.» (80,6%), ÒÎÎ
-«Research&amp;Development öåíòð «Êàçàõñòàí èíæèíèðèíã» (71%).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Наибольшее
+количество мужчин - в ТОО «Ghalam» (87%), РГП на ПХВ «Национальный научный
+центр травматологии и ортопедии имени академика Батпенова Н.Д.» (80,6%), ТОО
+«Research&amp;Development центр «Казахстан инжиниринг» (71%).</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Ìîëîäûå
-ó÷åíûå</b><b><span lang=KZ>. </span></b>Îáùàÿ ÷èñëåííîñòü ìîëîäûõ ó÷åíûõ
-ñîñòàâëÿåò 989 ÷åë. èëè 32,8% îò îáùåãî ÷èñëà íàó÷íûõ ñîòðóäíèêîâ (ïðèëîæåíèå 1.5.2).
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Молодые
+ученые</b><b><span lang=KZ>. </span></b>Общая численность молодых ученых
+составляет 989 чел. или 32,8% от общего числа научных сотрудников (приложение 1.5.2).
 </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Áîëüøå âñåãî
-ìîëîäûõ ó÷åíûõ ðàáîòàþò â ÒÎÎ «Êàðàüàëûêñêàÿ ÑÕÎÑ» - (100%), ÐÃÏ íà ÏÕÂ
-«Íàöèîíàëüíûé Ïðîèçâîäñòâåííûé Öåíòð Òðàíñôóçèîëîãèè» (64%), ÒÎÎ «Íàó÷íûé öåíòð
-çåðíîãî õîçÿéñòâà» (60,4%), ÒÎÎ «Êàçàõñêèé ÍÈÈ ïåðåðàáàòûâàþùåé è ïèùåâîé
-ïðîìûøëåííîñòè» (56,6%), ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé öåíòð îáùåñòâåííîãî
-çäðàâîîõðàíåíèÿ» (56,6), ÒÎÎ «Èíñòèòóò èîíîñôåðû» (53,4%), ÒÎÎ «Íàöèîíàëüíûé
-öåíòð áèîòåõíîëîãèè» (51%) (ðèñ. <span lang=KZ>1.5.</span>6). </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Больше всего
+молодых ученых работают в ТОО «Караьалыкская СХОС» - (100%), РГП на ПХВ
+«Национальный Производственный Центр Трансфузиологии» (64%), ТОО «Научный центр
+зерного хозяйства» (60,4%), ТОО «Казахский НИИ перерабатывающей и пищевой
+промышленности» (56,6%), РГП на ПХВ «Национальный центр общественного
+здравоохранения» (56,6), ТОО «Институт ионосферы» (53,4%), ТОО «Национальный
+центр биотехнологии» (51%) (рис. <span lang=KZ>1.5.</span>6). </p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><img
 width=798 height=330 src="1.5.files/image009.png" align=left hspace=12></p>
@@ -595,16 +1084,16 @@ width=798 height=330 src="1.5.files/image009.png" align=left hspace=12></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>Ðèñóíîê
-<span lang=KZ>1.5.</span>6. Äîëÿ ìîëîäûõ ó÷åíûõ, %</p>
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>Рисунок
+<span lang=KZ>1.5.</span>6. Доля молодых ученых, %</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ìåíüøå âñåãî
-- â ÒÎÎ «Êàðàãàíäèíñêàÿ ÑÕÎÑ» (0%), ÀÎ «Íàöèîíàëüíàÿ êîìïàíèÿ «&#1178;àçà&#1179;ñòàí
-&#1170;àðûø Ñàïàðû» (3,8%), ÀÎ «Íàó÷íûé öåíòð àêóøåðñòâà, ãèíåêîëîãèè è
-ïåðèíàòîëîãèè» (8,6%), ÒÎÎ «ÑÕÎÑ õëîïêîâîäñòâà è áàõ÷åâîäñòâà» (9,1%), ÒÎÎ
-«Ðåñïóáëèêàíñêàÿ êîëëåêöèÿ ìèêðîîðãàíèçìîâ» (11,1%), ÒÎÎ «OtarBioPharm»
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Меньше всего
+- в ТОО «Карагандинская СХОС» (0%), АО «Национальная компания «&#1178;аза&#1179;стан
+&#1170;арыш Сапары» (3,8%), АО «Научный центр акушерства, гинекологии и
+перинатологии» (8,6%), ТОО «СХОС хлопководства и бахчеводства» (9,1%), ТОО
+«Республиканская коллекция микроорганизмов» (11,1%), ТОО «OtarBioPharm»
 (15,1%).</p>
 
 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
@@ -613,19 +1102,19 @@ font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
 
 <p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
 0cm;margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;line-height:
-normal'><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Êàäðîâûé
-ïîòåíöèàë ïåðâûõ ðóêîâîäèòåëåé</span></b></p>
+normal'><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Кадровый
+потенциал первых руководителей</span></b></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Âîçðàñòíîé
-ñîñòàâ. </b>Âîçðàñò ïåðâûõ ðóêîâîäèòåëåé êîëåáëåòñÿ îò 36 äî 72 ëåò. Â âîçðàñòå
-äî 40 ëåò – 4 ÷åë., îò 40 äî 49 ëåò – 16 ÷åë. èëè 34%, îò 50 äî 59 ëåò – 17
-÷åë. (36,2%), îò 60 äî 69 ëåò – 7 ÷åë. (14,9%), ñòàðøå 70 ëåò – 3 ÷åë. (6,4%) (òàáë.
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Возрастной
+состав. </b>Возраст первых руководителей колеблется от 36 до 72 лет. В возрасте
+до 40 лет – 4 чел., от 40 до 49 лет – 16 чел. или 34%, от 50 до 59 лет – 17
+чел. (36,2%), от 60 до 69 лет – 7 чел. (14,9%), старше 70 лет – 3 чел. (6,4%) (табл.
 <span lang=KZ>1.5.</span>1).</p>
 
 <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify'>Òàáëèöà <span lang=KZ>1.5.</span>1.
-Âîçðàñòíîé ñîñòàâ ïåðâûõ ðóêîâîäèòåëåé</p>
+<p class=MsoNormal style='text-align:justify'>Таблица <span lang=KZ>1.5.</span>1.
+Возрастной состав первых руководителей</p>
 
 <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
 
@@ -634,8 +1123,8 @@ normal'><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Ê
  <tr>
   <td width=850 colspan=8 valign=top style='width:509.75pt;border:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>×èñëåííîñòü
-  ïåðâûõ ðóêîâîäèòåëåé â çàâèñèìîñòè îò âîçðàñòà</p>
+  <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Численность
+  первых руководителей в зависимости от возраста</p>
   </td>
  </tr>
  <tr>
@@ -724,318 +1213,318 @@ normal'><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Ê
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñàìûìè
-ìîëîäûìè ðóêîâîäèòåëÿìè ÿâëÿþòñÿ è.î. ïðåäñåäàòåëÿ ïðàâëåíèÿ» Êàðàáàëûêñêàÿ
-ÑÕÎÑ» Ïóãà÷åâ Ð.Ï. – 33 ãîäà è äèðåêòîð ÒÎÎ «Èíñòèòóò èîíîñôåðû» Íóðàêûíîâ Ñ.
-Ì. - 36 ëåò, ìàãèñòð òåõíè÷åñêèõ íàóê. </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Самыми
+молодыми руководителями являются и.о. председателя правления» Карабалыкская
+СХОС» Пугачев Р.П. – 33 года и директор ТОО «Институт ионосферы» Нуракынов С.
+М. - 36 лет, магистр технических наук. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñàìûìè
-ñòàðøèìè – ïðåäñåäàòåëü ïðàâëåíèÿ ÀÎ «Íàó÷íûé öåíòð ïðîòèâîèíôåêöèîííûõ
-ïðåïàðàòîâ» Èëüèí À.È., ä.õ.í., àêàäåìèê ÊàçÍÀÅÍ - 72 ãîäà è ïðåäñåäàòåëü
-ïðàâëåíèÿ ÀÎ «Íàöèîíàëüíûé öåíòð íåéðîõèðóðãèè» Àêøóëàêîâ Ñ.Ê., ä.ì.í.,
-àêàäåìèê ÍÀÍ ÐÊ - 71 ãîä è ïðåäñåäàòåëü ïðàâëåíèÿ ÒÎÎ «Âîñòî÷íî-Êàçàõñòàíñêàÿ
-ÑÕÎÑ» Òîìàøåíêî À.Ï. – 71 ãîä.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Самыми
+старшими – председатель правления АО «Научный центр противоинфекционных
+препаратов» Ильин А.И., д.х.н., академик КазНАЕН - 72 года и председатель
+правления АО «Национальный центр нейрохирургии» Акшулаков С.К., д.м.н.,
+академик НАН РК - 71 год и председатель правления ТОО «Восточно-Казахстанская
+СХОС» Томашенко А.П. – 71 год.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Èç
-ïðåäñòàâëåííûõ ðóêîâîäèòåëåé îðãàíèçàöèé 77,6% - ìóæ÷èíû.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Из
+представленных руководителей организаций 77,6% - мужчины.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Îñòåïåíåííîñòü.
-</b>Îñòåïåíåííîñòü ïåðâûõ ðóêîâîäèòåëåé ñîñòàâëÿåò 76,6%, â òîì ÷èñëå äîêòîðîâ
-íàóê 13 ÷åë. (26,5%), êàíäèäàòîâ íàóê – 19 ÷åë. (38,8), äîêòîðîâ PhD – 4 ÷åë. (8,2%).
-6 ðóêîâîäèòåëåé ÿâëÿþòñÿ ìàãèñòðàìè (12,2%), 7 ÷åë. - áåç ó÷åíîé ñòåïåíè (14,3%).
-×åòûðå ðóêîâîäèòåëÿ (8,1%) ÿâëÿþòñÿ àêàäåìèêàìè ÍÀÍ ÐÊ, äâîå – àêàäåìèêàìè
-Êàçàõñòàíñêîé íàöèîíàëüíîé àêàäåìèè åñòåñòâåííûõ íàóê, 4 – àêàäåìèêàìè Àêàäåìèè
-ñåëüñêîõîçÿéñòâåííûõ íàóê ÐÊ (ïðèëîæåíèå 1.5.3).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Остепененность.
+</b>Остепененность первых руководителей составляет 76,6%, в том числе докторов
+наук 13 чел. (26,5%), кандидатов наук – 19 чел. (38,8), докторов PhD – 4 чел. (8,2%).
+6 руководителей являются магистрами (12,2%), 7 чел. - без ученой степени (14,3%).
+Четыре руководителя (8,1%) являются академиками НАН РК, двое – академиками
+Казахстанской национальной академии естественных наук, 4 – академиками Академии
+сельскохозяйственных наук РК (приложение 1.5.3).</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>6 ðóêîâîäèòåëåé
-èìåþò ãîñóäàðñòâåííûå íàãðàäû, 17 – íàãðóäíûå çíàêè, þáèëåéíûå ìåäàëè è äð., 11
-ðóêîâîäèòåëåé íå èìåþò íèêàêèõ ãîñóäàðñòâåííûõ íàãðàä.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>6 руководителей
+имеют государственные награды, 17 – нагрудные знаки, юбилейные медали и др., 11
+руководителей не имеют никаких государственных наград.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Êàñåíîâ Ì.Ì.,
-Æàðìåíîâ À.À., Àêøóëàêîâ Ñ.Ê. ÿâëÿþòñÿ ëàóðåàòàìè Ãîñóäàðñòâåííûõ ïðåìèé â
-îáëàñòè íàóêè è òåõíèêè, Áàëïàíîâ Ä.Ñ. - ñòèïåíäèàò Ãîñóäàðñòâåííîé Ïðåìèè,
-ïðèñóæäàåìîé ìîëîäûì âûäàþùèìñÿ ó÷åíûì ÐÊ.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Касенов М.М.,
+Жарменов А.А., Акшулаков С.К. являются лауреатами Государственных премий в
+области науки и техники, Балпанов Д.С. - стипендиат Государственной Премии,
+присуждаемой молодым выдающимся ученым РК.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Êàéäàðîâà
-Ä.Ð. ÿâëÿåòñÿ Ëàóðåàòîì íåçàâèñèìîé íàãðàäû «Ëèäåð íàóêè», ó÷ðåæäåííîé
-ìåæäóíàðîäíîé êîìïàíèåé ThomsonReuters è Íàöèîíàëüíûì öåíòðîì íàó÷íî-òåõíè÷åñêîé
-èíôîðìàöèè.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Кайдарова
+Д.Р. является Лауреатом независимой награды «Лидер науки», учрежденной
+международной компанией ThomsonReuters и Национальным центром научно-технической
+информации.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ðóêîâîäèòåëè
-â çàâèñèìîñòè îò ôîðìû ñîáñòâåííîñòè îðãàíèçàöèè íàçíà÷àþòñÿ ïðèêàçàìè
-âûøåñòîÿùèõ îðãàíèçàöèé èëè ó÷ðåäèòåëÿìè.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Руководители
+в зависимости от формы собственности организации назначаются приказами
+вышестоящих организаций или учредителями.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ó íåêîòîðûõ
-ñðîê óêàçàí â êîíòðàêòå - 1, 2, 3, 4 ãîäà, ó íåêîòîðûõ äîãîâîð çàêëþ÷åí íà
-íåîïðåäåëåííîå âðåìÿ (áåññðî÷íî).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>У некоторых
+срок указан в контракте - 1, 2, 3, 4 года, у некоторых договор заключен на
+неопределенное время (бессрочно).</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Àíàëèç
-ïîêàçàë, ÷òî ìîëîäûå ðóêîâîäèòåëè íå èìåþò ó÷åíûõ ñòåïåíåé (ìàãèñòðû èëè áåç
-ñòåïåíè), íàçíà÷àþòñÿ íà ñðîê 1-2 ãîäà è íå èìåþò ãîñóäàðñòâåííûõ èëè
-âåäîìñòâåííûõ íàãðàä.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Анализ
+показал, что молодые руководители не имеют ученых степеней (магистры или без
+степени), назначаются на срок 1-2 года и не имеют государственных или
+ведомственных наград.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><b>Ìåðû
-ïîîùðåíèÿ ñîòðóäíèêîâ</b></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><b>Меры
+поощрения сотрудников</b></p>
 
 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
 justify;text-indent:35.45pt;line-height:normal'><b><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'>Ãîñíàãðàäû. </span></b><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>Çà ïîñëåäíèå 3
-ãîäà âñåãî 97 ó÷åíûõ ïîëó÷èëè ãîñóäàðñòâåííûå íàãðàäû, ÷òî ñîñòàâëÿåò 1,1% îò
-îáùåé ÷èñëåííîñòè íàó÷íûõ ñîòðóäíèêîâ. Ïî íåêîòîðûì îðãàíèçàöèÿì äàííûå
-ïðåäñòàâëåíû çà ïîñëåäíèå 5-10 ëåò, ïîýòîìó ôàêòè÷åñêè ýòà öèôðà ìîæåò áûòü
-íèæå.</span></p>
+font-family:"Times New Roman",serif'>Госнаграды. </span></b><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>За последние 3
+года всего 97 ученых получили государственные награды, что составляет 1,1% от
+общей численности научных сотрудников. По некоторым организациям данные
+представлены за последние 5-10 лет, поэтому фактически эта цифра может быть
+ниже.</span></p>
 
 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
 justify;text-indent:35.45pt;line-height:normal'><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'>Êâàðòèðû ïîëó÷àþò íå âî âñåõ îðãàíèçàöèÿõ.
-Ýòî âî ìíîãîì çàâèñèò îò ïåðâîãî ðóêîâîäèòåëÿ. </span></p>
+font-family:"Times New Roman",serif'>Квартиры получают не во всех организациях.
+Это во многом зависит от первого руководителя. </span></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Òàê, â ÒÎÎ
-«OtarBioPharm» - îáåñïå÷åíû ñëóæåáíûì æèëüåì 70% ðàáîòíèêîâ (òðè 60-êâàðòèðíûõ
-äîìà, ïîñòðîåííûõ äëÿ ðàáîòíèêîâ ÐÃÏ ÍÈÈÏÁÁ è Òîâàðèùåñòâà â 2021 ãîäó).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Так, в ТОО
+«OtarBioPharm» - обеспечены служебным жильем 70% работников (три 60-квартирных
+дома, построенных для работников РГП НИИПББ и Товарищества в 2021 году).</p>
 
 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
 justify;text-indent:35.45pt;line-height:normal'><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'>Â ÐÃÏ íà ÏÕÂ «Èíñòèòóò áîòàíèêè è ôèòîèíòðîäóêöèè»
-â 2018 ã. ïî ïðîãðàììå «Íóðëû æåð» 5 ìîëîäûõ ñïåöèàëèñòîâ ïîëó÷èëè êâàðòèðû, ïî
-ïðîãðàììå «Àëìàòû Æàñòàð» ñ 2020 ãîäà ïîëó÷èëè 13 êâàðòèð, îæèäàåòñÿ ïîëó÷åíèå
-3-õ êâàðòèð.</span></p>
+font-family:"Times New Roman",serif'>В РГП на ПХВ «Институт ботаники и фитоинтродукции»
+в 2018 г. по программе «Нурлы жер» 5 молодых специалистов получили квартиры, по
+программе «Алматы Жастар» с 2020 года получили 13 квартир, ожидается получение
+3-х квартир.</span></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>ÒÎÎ
-«Íàöèîíàëüíûé Íàó÷íûé Îíêîëîãè÷åñêèé Öåíòð» â 2009-2010 ãã. ïîëó÷åíî 9 êâàðòèð.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>ТОО
+«Национальный Научный Онкологический Центр» в 2009-2010 гг. получено 9 квартир.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>ÐÃÏ íà ÏÕÂ
-«Íàöèîíàëüíûé íàó÷íûé öåíòð ôòèçèîïóëüìîíîëîãèè Ðåñïóáëèêè Êàçàõñòàí» – 3
-ñîòðóäíèêà ïîëó÷èëè æèëüå. ÀÎ «Íàó÷íûé öåíòð àêóøåðñòâà, ãèíåêîëîãèè è
-ïåðèíàòîëîãèè» - 2 ÷åë. Â ÒÎÎ «Êàðàáàëûêñêàÿ ÑÕÎÑ» - ïðåäîñòàâëÿåòñÿ îáùåùèòèå.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>РГП на ПХВ
+«Национальный научный центр фтизиопульмонологии Республики Казахстан» – 3
+сотрудника получили жилье. АО «Научный центр акушерства, гинекологии и
+перинатологии» - 2 чел. В ТОО «Карабалыкская СХОС» - предоставляется общещитие.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Ïðåìèè</b><b><span
-lang=KZ>. </span></b>Âñå îðãàíèçàöèè âûïëà÷èâàþò ðàáîòíèêàì ïðåìèè ïðè íàëè÷èè
-ýêîíîìèè ôîíäà îïëàòû òðóäà, ïðèóðî÷åííûå ê íàöèîíàëüíûì, ãîñóäàðñòâåííûì,
-ïðîôåññèîíàëüíûì ïðàçäíèêàì: êî Äíþ Íåçàâèñèìîñòè ÐÊ, æåíùèíàì ê 8 Ìàðòà è äð.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Премии</b><b><span
+lang=KZ>. </span></b>Все организации выплачивают работникам премии при наличии
+экономии фонда оплаты труда, приуроченные к национальным, государственным,
+профессиональным праздникам: ко Дню Независимости РК, женщинам к 8 Марта и др.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Áîëüøàÿ ÷àñòü
-îðãàíèçàöèé âûïëà÷èâàåò ïðåìèè ïî èòîãàì ðàáîòû çà êâàðòàë, áîíóñû çà
-îðãàíèçàöèþ, ïðîâåäåíèå è íåïîñðåäñòâåííîå ó÷àñòèå â ïóáëè÷íûõ ìåðîïðèÿòèÿõ ïî
-èòîãàì êâàðòàëà (ñåìèíàðû, òðåíèíãè, êîíôåðåíöèè, ôîðóìû è ò.ä.),
-âîçíàãðàæäåíèå ïî èòîãàì ðàáîòû çà ãîä.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Большая часть
+организаций выплачивает премии по итогам работы за квартал, бонусы за
+организацию, проведение и непосредственное участие в публичных мероприятиях по
+итогам квартала (семинары, тренинги, конференции, форумы и т.д.),
+вознаграждение по итогам работы за год.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Òàêæå
-îêàçûâàþòñÿ ìåðû ïîîùðåíèÿ ñîòðóäíèêàì: çà íàó÷íûé âêëàä â îòðàñëü åæåãîäíî,
-ïðèóðî÷åííûå ê çíàìåíàòåëüíûì äàòàì, þáèëåÿì.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Также
+оказываются меры поощрения сотрудникам: за научный вклад в отрасль ежегодно,
+приуроченные к знаменательным датам, юбилеям.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><b><span
-lang=KZ>1.5.2 </span></b><b>Àêòóàëüíîñòü è ïåðñïåêòèâíîñòü íàïðàâëåíèé íàó÷íûõ</b><b><span
-lang=KZ> èññëåäîâàíèé, ðåàëèçóåìûõ íàó÷íîé îðãàíèçàöèåé</span></b></p>
+lang=KZ>1.5.2 </span></b><b>Актуальность и перспективность направлений научных</b><b><span
+lang=KZ> исследований, реализуемых научной организацией</span></b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><b><span
 lang=KZ>&nbsp;</span></b></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Îñíîâíûìè
-íàó÷íûìè íàïðàâëåíèÿìè</b> ÿâëÿþòñÿ ïðèîðèòåòíûå íàïðàâëåíèÿ íàóêè â ÐÊ: </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Основными
+научными направлениями</b> являются приоритетные направления науки в РК: </p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>-
-Ðàöèîíàëüíîå èñïîëüçîâàíèå âîäíûõ ðåñóðñîâ, æèâîòíîãî è ðàñòèòåëüíîãî ìèðà,
-ýêîëîãèÿ.</p>
+Рациональное использование водных ресурсов, животного и растительного мира,
+экология.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- Ãåîëîãèÿ,
-äîáû÷à è ïåðåðàáîòêà ìèíåðàëüíîãî è óãëåâîäîðîäíîãî ñûðüÿ, íîâûå ìàòåðèàëû,
-òåõíîëîãèè, áåçîïàñíûå èçäåëèÿ è êîíñòðóêöèè.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- Геология,
+добыча и переработка минерального и углеводородного сырья, новые материалы,
+технологии, безопасные изделия и конструкции.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- Ýíåðãåòèêà
-è ìàøèíîñòðîåíèå.</p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>-
-Èíôîðìàöèîííûå, êîììóíèêàöèîííûå è êîñìè÷åñêèå òåõíîëîãèè. </p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- Íàó÷íûå
-èññëåäîâàíèÿ â îáëàñòè åñòåñòâåííûõ íàóê.</p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- Íàóêà î
-æèçíè è çäîðîâüå.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- Энергетика
+и машиностроение.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>-
-Èññëåäîâàíèÿ â îáëàñòè îáðàçîâàíèÿ è íàóêè.</p>
+Информационные, коммуникационные и космические технологии. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- Научные
+исследования в области естественных наук.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- Наука о
+жизни и здоровье.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>-
-Èññëåäîâàíèÿ â îáëàñòè ñîöèàëüíûõ è ãóìàíèòàðíûõ íàóê. </p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- Óñòîé÷èâîå
-ðàçâèòèå àãðîïðîìûøëåííîãî êîìïëåêñà è áåçîïàñíîñòü ñåëüñêîõîçÿéñòâåííîé
-ïðîäóêöèè.</p>
+Исследования в области образования и науки.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>-
-Íàöèîíàëüíàÿ áåçîïàñíîñòü è îáîðîíà. </p>
+Исследования в области социальных и гуманитарных наук. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ïî ÷åòûðåì
-íàïðàâëåíèÿì âûïîëíÿþò íàó÷íûå ïðîåêòû - ÀÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé
-èíñòèòóò îíêîëîãèè è ðàäèîëîãèè», ÒÎÎ «Èíñòèòóò èîíîñôåðû», ÒÎÎ «Íàöèîíàëüíûé
-öåíòð áèîòåõíîëîãèè» (ïðèëîæåíèå 1.5.5).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- Устойчивое
+развитие агропромышленного комплекса и безопасность сельскохозяйственной
+продукции.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ïî òðåì
-íàïðàâëåíèÿì - Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì áèîëîãè÷åñêîé
-áåçîïàñíîñòè, ÐÃÏ íà ÏÕÂ «Èíñòèòóò áîòàíèêè è ôèòîèíòðîäóêöèè», ÐÃÏ
-«Íàöèîíàëüíûé öåíòð ïî êîìïëåêñíîé ïåðåðàáîòêå ìèíåðàëüíîãî ñûðüÿ Ðåñïóáëèêè
-Êàçàõñòàí».</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>-
+Национальная безопасность и оборона. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Îñòàëüíûå
-îðãàíèçàöèè âûïîëíÿþò ïðîåêòû ïî 1-2 íàïðàâëåíèÿì.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>По четырем
+направлениям выполняют научные проекты - АО «Казахский научно-исследовательский
+институт онкологии и радиологии», ТОО «Институт ионосферы», ТОО «Национальный
+центр биотехнологии» (приложение 1.5.5).</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Íàó÷íûå
-ïðîãðàììû</b><b><span lang=KZ>. </span></b>Íàó÷íûå ïðîåêòû âûïîëíÿþòñÿ ïî ÏÖÔ,
-ÃÔ, Ãðàíòû ïî êîììåðöèàëèçàöèè ÀÎ «Ôîíä íàóêè», ÃÔ äëÿ ìîëîäûõ ó÷åíûõ ïî
-ïðîãðàììå «Æàñ &#1170;àëûì», Ïðîãðàììû Ãîñóäàðñòâåííîãî çàäàíèÿ.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>По трем
+направлениям - Научно-исследовательский институт проблем биологической
+безопасности, РГП на ПХВ «Институт ботаники и фитоинтродукции», РГП
+«Национальный центр по комплексной переработке минерального сырья Республики
+Казахстан».</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Êðîìå òîãî,
-íàó÷íûìè îðãàíèçàöèÿìè âûïîëíÿþòñÿ ïðîåêòû âíåáþäæåòíîãî ïëàíèðîâàíèÿ,
-ñîâìåñòíûå ïðîåêòû ñ çàðóáåæíûìè îðãàíèçàöèÿìè, ìíîãîöåíòðîâûå êëèíè÷åñêèå
-èññëåäîâàíèÿ, ïðè ïîääåðæêå çàðóáåæíûõ è îòå÷åñòâåííûõ ñïîíñîðîâ è äð. </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Остальные
+организации выполняют проекты по 1-2 направлениям.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íàó÷íûå
-îðãàíèçàöèè ÿâëÿþòñÿ êàê ðóêîâîäèòåëÿìè, òàê è ñîèñïîëíèòåëÿìè ïðîåêòîâ (ðèñ. <span
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Научные
+программы</b><b><span lang=KZ>. </span></b>Научные проекты выполняются по ПЦФ,
+ГФ, Гранты по коммерциализации АО «Фонд науки», ГФ для молодых ученых по
+программе «Жас &#1170;алым», Программы Государственного задания.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Кроме того,
+научными организациями выполняются проекты внебюджетного планирования,
+совместные проекты с зарубежными организациями, многоцентровые клинические
+исследования, при поддержке зарубежных и отечественных спонсоров и др. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Научные
+организации являются как руководителями, так и соисполнителями проектов (рис. <span
 lang=KZ>1.5.</span>7).</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
 <p class=MsoNormal align=center style='text-align:center'><img width=756
-height=368 id="Ðèñóíîê 11" src="1.5.files/image010.png"></p>
+height=368 id="Рисунок 11" src="1.5.files/image010.png"></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>Ðèñóíîê
-<span lang=KZ>1.5.</span>7. Êîëè÷åñòâî âûïîëíÿåìûõ íàó÷íûõ íàïðàâëåíèé è
-íàó÷íûõ ïðîãðàìì, åä.</p>
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>Рисунок
+<span lang=KZ>1.5.</span>7. Количество выполняемых научных направлений и
+научных программ, ед.</p>
 
 <p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Áîëüøå âñåãî
-ïðîåêòîâ â 2021-2023 ãîäàõ âûïîëíÿþò ó÷åíûå:</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Больше всего
+проектов в 2021-2023 годах выполняют ученые:</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>- <span
-lang=KZ>ÒÎÎ «Íàöèîíàëüíûé öåíòð áèîòåõíîëîãèè – 62 ïðîåêòà, ãäå ÷èñëåííîñòü
-íàó÷íûõ ñîòðóäíèêîâ ñîñòàâëÿåò 235 ÷åë.,</span></p>
+lang=KZ>ТОО «Национальный центр биотехнологии – 62 проекта, где численность
+научных сотрудников составляет 235 чел.,</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ÐÃÏ «Íàöèîíàëüíûé öåíòð ïî êîìïëåêñíîé ïåðåðàáîòêå ìèíåðàëüíîãî ñûðüÿ
-Ðåñïóáëèêè Êàçàõñòàí» - 33 ïðîåêòà – 208 ÷åë.,</span></p>
+lang=KZ>- РГП «Национальный центр по комплексной переработке минерального сырья
+Республики Казахстан» - 33 проекта – 208 чел.,</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé íàó÷íûé öåíòð ôòèçèîïóëüìîíîëîãèè Ðåñïóáëèêè
-Êàçàõñòàí» ÌÇ ÐÊ – 26 ïðîåêòîâ – 44 ÷åë., </span></p>
+lang=KZ>- РГП на ПХВ «Национальный научный центр фтизиопульмонологии Республики
+Казахстан» МЗ РК – 26 проектов – 44 чел., </span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ÒÎÎ «Êàçàõñêèé ÍÈÈ çåìëåäåëèÿ è ðàñòåíèåâîäñòâà» - 24 ïðîåêòà – 98
-÷åë.;</span></p>
+lang=KZ>- ТОО «Казахский НИИ земледелия и растениеводства» - 24 проекта – 98
+чел.;</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ÒÎÎ «Êàçàõñêèé ÍÈÈ çåìëåäåëèÿ è ðàñòåíèåâîäñòâà» - 24 ïðîåêòà - </span></p>
+lang=KZ>- ТОО «Казахский НИИ земледелия и растениеводства» - 24 проекта - </span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ÒÎÎ «Èíñòèòóò èîíîñôåðû» - 23 ïðîåêòà – 73 ñîòðóäíèêà, </span></p>
+lang=KZ>- ТОО «Институт ионосферы» - 23 проекта – 73 сотрудника, </span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì áèîëîãè÷åñêîé áåçîïàñíîñòè
-– 18 ïðîåêòîâ – 247 ÷åë., </span></p>
+lang=KZ>- Научно-исследовательский институт проблем биологической безопасности
+– 18 проектов – 247 чел., </span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ÒÎÎ « Êàçàõñêèé ÍÈÈ æèâîòíîâîäñòâà è êîðìîïðîèçâîäñòâà» - 13 ïðîåêòîâ
-– 53 ÷åë.,</span></p>
+lang=KZ>- ТОО « Казахский НИИ животноводства и кормопроизводства» - 13 проектов
+– 53 чел.,</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ÐÃÏ íà ÏÕÂ «Èíñòèòóò áîòàíèêè è ôèòîèíòðîäóêöèè» - 11 ïðîåêòîâ – 146
-÷åë., </span></p>
+lang=KZ>- РГП на ПХВ «Институт ботаники и фитоинтродукции» - 11 проектов – 146
+чел., </span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ÒÎÎ «Êàçàõñêèé ÍÈÈ çàùèòû è êàðàíòèíà ðàñòåíèé» - 11 ïðîåêòîâ, 154
-÷åë.,</span></p>
+lang=KZ>- ТОО «Казахский НИИ защиты и карантина растений» - 11 проектов, 154
+чел.,</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ÒÎÎ «Àñòðîôèçè÷åñêèé èíñòèòóò èìåíè Â.Ã. Ôåñåíêîâà» - 10 ïðîåêòîâ –
-53 ÷åë.,</span></p>
+lang=KZ>- ТОО «Астрофизический институт имени В.Г. Фесенкова» - 10 проектов –
+53 чел.,</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>- ÀÎ &quot;Íàöèîíàëüíûé öåíòð êîñìè÷åñêèõ èññëåäîâàíèé è
-òåõíîëîãèé&quot; Àýðîêîñìè÷åñêîãî êîìèòåòà ÌÖÐÈÀÏ ÐÊ – 10 ïðîåêòîâ – 40 ÷åë.</span></p>
+lang=KZ>- АО &quot;Национальный центр космических исследований и
+технологий&quot; Аэрокосмического комитета МЦРИАП РК – 10 проектов – 40 чел.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÀÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò îíêîëîãèè è ðàäèîëîãèè»
-(76 ÷åë.) êðîìå áþäæåòíûõ ïðîãðàìì (4), âûïîëíÿþò êëèíè÷åñêèå è èíèöèàòèâíûå
-èññëåäîâàíèÿ è ïðîåêòû çà ñ÷åò çàðóáåæíûõ ãðàíòîäàòåëåé (18) – 84 ÷åë.; ÐÃÏ íà
-ÏÕÂ «Íàöèîíàëüíûé öåíòð îáùåñòâåííîãî çäðàâîîõðàíåíèÿ» ÌÇ ÐÊ – 1 ãðàíò è 8 –
-çàðóáåæíûõ ïðîåêòîâ.</span></p>
+lang=KZ>АО «Казахский научно-исследовательский институт онкологии и радиологии»
+(76 чел.) кроме бюджетных программ (4), выполняют клинические и инициативные
+исследования и проекты за счет зарубежных грантодателей (18) – 84 чел.; РГП на
+ПХВ «Национальный центр общественного здравоохранения» МЗ РК – 1 грант и 8 –
+зарубежных проектов.</span></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>ÀÎ «Íàó÷íûé
-öåíòð ïåäèàòðèè è äåòñêîé õèðóðãèè» (206 ÷åë.) âûïîëíÿåò 3 ÏÖÔ, ÁÏ, ÃÔ è 7
-ìåæäóíàðîäíûõ íåèíòåðâåíöèîííûõ ìíîãîöåíòðîâûõ êëèíè÷åñêèõ èññëåäîâàíèé,
-ìåæäóíàðîäíûõ èíòåðâåíöèîííûõ èññëåäîâàíèé, ñîâìåñòíûõ íàó÷íûõ ïðîåêòîâ ñ
-çàðóáåæíûìè ïàðòíåðàìè. </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>АО «Научный
+центр педиатрии и детской хирургии» (206 чел.) выполняет 3 ПЦФ, БП, ГФ и 7
+международных неинтервенционных многоцентровых клинических исследований,
+международных интервенционных исследований, совместных научных проектов с
+зарубежными партнерами. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Âûïîëíÿþòñÿ
-ïî îäíîìó ïðîåêòó â ÀÎ «Íàöèîíàëüíûé öåíòð íåéðîõèðóðãèè»; ÐÃÏ íà ÏÕÂ
-«Ðåñïóáëèêàíñêèé íàó÷íî-ïðàêòè÷åñêèé öåíòð ïñèõè÷åñêîãî çäîðîâüÿ» ÌÇ ÐÊ (12
-÷åë.); ÀÎ «Íàöèîíàëüíàÿ Êîìïàíèÿ «&#1178;àçà&#1179;ñòàí &#1170;àðûø Ñàïàðû» (78
-÷åë.); ÒÎÎ «<span lang=EN-US>Ghalam</span>» (23 ÷åë.); ÐÃÏ «Èíôðàêîñ» (31
-÷åë.). </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Выполняются
+по одному проекту в АО «Национальный центр нейрохирургии»; РГП на ПХВ
+«Республиканский научно-практический центр психического здоровья» МЗ РК (12
+чел.); АО «Национальная Компания «&#1178;аза&#1179;стан &#1170;арыш Сапары» (78
+чел.); ТОО «<span lang=EN-US>Ghalam</span>» (23 чел.); РГП «Инфракос» (31
+чел.). </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íåò
-áþäæåòíîãî ôèíàíñèðîâàíèÿ (ïðîãðàììû è ãðàíòû) â ÀÎ &quot;Êàçàõñêèé
-íàó÷íî-èññëåäîâàòåëüñêèé è ïðîåêòíûé èíñòèòóò ñòðîèòåëüñòâà è
-àðõèòåêòóðû&quot;. Çäåñü 12 ÷åë. ñ ó÷åíîé ñòåïåíüþ âûïîëíÿþò àêòóàëüíûå
-èíèöèàòèâíûå èññëåäîâàíèÿ ïî âîïðîñàì ïðèìåíåíèÿ îòå÷åñòâåííîé êîíñòðóêöèîííîé
-ñòàëè â ñòðîèòåëüñòâå, äèíàìè÷åñêèå èñïûòàíèÿ çäàíèé è ñîîðóæåíèé, àíàëèç
-àêñåëåðîãðàìì ðåàëüíûõ çåìëåòðÿñåíèé, ïîëó÷åííûõ èíæåíåðíî-ñåéñìîìåòðè÷åñêîé
-ñëóæáû ÀÎ «ÊàçÍÈÈÑÀ», èññëåäîâàíèÿ ïî îöåíêè ñåéñìè÷åñêîãî ðèñêà çäàíèé íà
-òåððèòîðèè ãîðîäà Àëìàòû.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Нет
+бюджетного финансирования (программы и гранты) в АО &quot;Казахский
+научно-исследовательский и проектный институт строительства и
+архитектуры&quot;. Здесь 12 чел. с ученой степенью выполняют актуальные
+инициативные исследования по вопросам применения отечественной конструкционной
+стали в строительстве, динамические испытания зданий и сооружений, анализ
+акселерограмм реальных землетрясений, полученных инженерно-сейсмометрической
+службы АО «КазНИИСА», исследования по оценки сейсмического риска зданий на
+территории города Алматы.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Àíàëèç
-ïîêàçûâàåò, ÷òî ìíîãî÷èñëåííûå îðãàíèçàöèè âûïîëíÿþò áîëüøå ïðîåêòîâ.
-Ñîîòâåòñòâåííî âîâëå÷åííîñòü ó÷åíûõ â èññëåäîâàíèÿ çäåñü âûøå. Ìàëî÷èñëåííûå
-îðãàíèçàöèè âûïîëíÿþò ïî 1-2 ïðîåêòà è âî ìíîãîì çàâèñÿò îò áàçîâîãî
-ôèíàíñèðîâàíèÿ.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Анализ
+показывает, что многочисленные организации выполняют больше проектов.
+Соответственно вовлеченность ученых в исследования здесь выше. Малочисленные
+организации выполняют по 1-2 проекта и во многом зависят от базового
+финансирования.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Òîëüêî â äâóõ
-îðãàíèçàöèÿõ - ÒÎÎ «Èíñòèòóò èîíîñôåðû» (6) è ÒÎÎ «Íàöèîíàëüíûé Íàó÷íûé
-Îíêîëîãè÷åñêèé Öåíòð» (1) ãðàíòû ïîëó÷èëè ìîëîäûå ó÷åíûå.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Только в двух
+организациях - ТОО «Институт ионосферы» (6) и ТОО «Национальный Научный
+Онкологический Центр» (1) гранты получили молодые ученые.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ó÷åíûå 10
-îðãàíèçàöèé âûïîëíÿþò ìåæäóíàðîäíûå ïðîåêòû. Ïî äîãîâîðàì ñ îðãàíèçàöèÿìè
-ðàáîòàåò ÒÎÎ «Research&amp;Development öåíòð «Êàçàõñòàí èíæèíèðèíã» (31 ÷åë.).
-ÒÎÎ «Êàçàõñêèé ÍÈÈ ýêîíîìèêè ÀÏÊ è ÐÑÒ» (50 ÷åë.) âûïîëíÿåò 2 ïðîåêòà ïî 019
-ïðîãðàììå ñ ÌÈÎ.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ученые 10
+организаций выполняют международные проекты. По договорам с организациями
+работает ТОО «Research&amp;Development центр «Казахстан инжиниринг» (31 чел.).
+ТОО «Казахский НИИ экономики АПК и РСТ» (50 чел.) выполняет 2 проекта по 019
+программе с МИО.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>1.5.3</b><b>
-Ðåçóëüòàòèâíîñòü íàó÷íî-òåõíè÷åñêîé äåÿòåëüíîñòè îðãàíèçàöèé çà ïîñëåäíèå 3
-ãîäà </b></p>
+Результативность научно-технической деятельности организаций за последние 3
+года </b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ðåçóëüòàòèâíîñòü
-ÍÒÄ îöåíèâàåòñÿ<b> </b>ïóáëèêàöèÿìè, èíäåêñèðóåìûìè â àâòîðèòåòíûõ çàðóáåæíûõ
-ðåñóðñàõ è â îòå÷åñòâåííûõ æóðíàëàõ, à òàêæå ìîíîãðàôèÿìè, ó÷åáíèêàìè, ó÷åáíûìè
-ïîñîáèÿìè. Àíàëèç ïîêàçàë, ÷òî ïî ðåçóëüòàòàì ÍÈÎÊÐ àêòèâíî ïóáëèêîâàëèñü
-íàó÷íûå ñòàòüè, èçäàâàëèñü ìîíîãðàôèè è ó÷åáíûå ïîñîáèÿ (ïðèëîæåíèå 1.5.6). </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Результативность
+НТД оценивается<b> </b>публикациями, индексируемыми в авторитетных зарубежных
+ресурсах и в отечественных журналах, а также монографиями, учебниками, учебными
+пособиями. Анализ показал, что по результатам НИОКР активно публиковались
+научные статьи, издавались монографии и учебные пособия (приложение 1.5.6). </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Ïóáëèêàöèè.
-</b>Âñåãî ó÷åíûìè íàó÷íûõ îðãàíèçàöèé çà 2021-2023 ãîäû îïóáëèêîâàíî 3852
-ñòàòüè, â òîì ÷èñëå â 2021 ãîäó – 1307, 2022 ã. – 1789 è çà ïåðâîå ïîëóãîäèå
-2023 ã. – 756 ñòàòåé. Ñëåäóåò îòìåòèòü, ÷òî â 2022 ãîäó áûëî îïóáëèêîâàíî
-ñòàòåé â 1,4 ðàçà áîëüøå, ÷åì â 2021 ãîäó. Ýòî ñâèäåòåëüñòâóåò î ðîñòå
-ïóáëèêàöèîííîé àêòèâíîñòè. </p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Публикации.
+</b>Всего учеными научных организаций за 2021-2023 годы опубликовано 3852
+статьи, в том числе в 2021 году – 1307, 2022 г. – 1789 и за первое полугодие
+2023 г. – 756 статей. Следует отметить, что в 2022 году было опубликовано
+статей в 1,4 раза больше, чем в 2021 году. Это свидетельствует о росте
+публикационной активности. </p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Òàêæå
-óâåëè÷èâàåòñÿ êîëè÷åñòâî ñòàòåé â êàçàõñòàíñêèõ èçäàíèÿõ – â 1,8 ðàçà,
-ìåæäóíàðîäíûõ – â 1,1 ðàçà ñîîòâåòñòâåííî. Â òîì ÷èñëå óâåëè÷èâàåòñÿ êîëè÷åñòâî
-ñòàòåé, èçäàííûõ â ìåæäóíàðîäíûõ ðåöåíçèðóåìûõ èçäàíèÿõ <span lang=EN-US>Web</span><span
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Также
+увеличивается количество статей в казахстанских изданиях – в 1,8 раза,
+международных – в 1,1 раза соответственно. В том числе увеличивается количество
+статей, изданных в международных рецензируемых изданиях <span lang=EN-US>Web</span><span
 lang=EN-US> </span><span lang=EN-US>of</span><span lang=EN-US> </span><span
 lang=EN-US>Knowledge</span>, <span lang=EN-US>Scopus</span>, <span lang=EN-US>Springer</span>
-– â 1,3 ðàçà ïî ñðàâíåíèþ ñ 2021 ãîäîì (ðèñ. <span lang=KZ>1.5.</span>8).</p>
+– в 1,3 раза по сравнению с 2021 годом (рис. <span lang=KZ>1.5.</span>8).</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><img
 width=622 height=266 src="1.5.files/image011.png" align=left hspace=12></p>
@@ -1048,428 +1537,432 @@ width=622 height=266 src="1.5.files/image011.png" align=left hspace=12></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
 
-<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>Ðèñóíîê
-<span lang=KZ>1.5.</span>8. Êîëè÷åñòâî ïóáëèêàöèé çà 2021-2023 ãîäû</p>
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'>Рисунок
+<span lang=KZ>1.5.</span>8. Количество публикаций за 2021-2023 годы</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>&nbsp;</b></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íàèáîëüøåå
-êîëè÷åñòâî ïóáëèêàöèé èìåþò: <a name="_Hlk147398389">ÀÎ «Íàó÷íûé öåíòð
-ïåäèàòðèè è äåòñêîé õèðóðãèè» (393),</a> ÀÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé
-èíñòèòóò îíêîëîãèè è ðàäèîëîãèè» (239), <span lang=KZ>ÒÎÎ «Íàöèîíàëüíûé öåíòð
-áèîòåõíîëîãèè» (168), </span>ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé íàó÷íûé öåíòð
-òðàâìàòîëîãèè è îðòîïåäèè èìåíè àêàäåìèêà Áàòïåíîâà Í.Ä.» Ì<span lang=KZ>Ç </span>Ð<span
-lang=KZ>Ê (161).</span></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Наибольшее
+количество публикаций имеют: <a name="_Hlk147398389">АО «Научный центр
+педиатрии и детской хирургии» (393),</a> АО «Казахский научно-исследовательский
+институт онкологии и радиологии» (239), <span lang=KZ>ТОО «Национальный центр
+биотехнологии» (168), </span>РГП на ПХВ «Национальный научный центр
+травматологии и ортопедии имени академика Батпенова Н.Д.» М<span lang=KZ>З </span>Р<span
+lang=KZ>К (161).</span></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íàèìåíüøåå
-êîëè÷åñòâî ïóáëèêàöèé â çàðóáåæíûõ èçäàíèÿõ èìåþò: <b>Êàçàõñêèé
-íàó÷íî-èññëåäîâàòåëüñêèé è ïðîåêòíûé èíñòèòóò ñòðîèòåëüñòâà è àðõèòåêòóðû</b>
-(2),<a name="_Hlk147401207"> ÒÎÎ «Ghalam» (6),</a> ÐÃÏ íà ÏÕÂ «Êàçàõñêèé
-íàó÷íûé öåíòð äåðìàòîëîãèè è èíôåêöèîííûõ çàáîëåâàíèé» ÌÇ ÐÊ (8), Èíôðàêîñ» <a
-name="_Hlk147401241">Àýðîêîñìè÷åñêîãî êîìèòåòà Ìèíèñòåðñòâà öèôðîâîãî ðàçâèòèÿ,
-èííîâàöèé è àýðîêîñìè÷åñêîé ïðîìûøëåííîñòè ÐÊ</a> (8).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Наименьшее
+количество публикаций в зарубежных изданиях имеют: <b>Казахский
+научно-исследовательский и проектный институт строительства и архитектуры</b>
+(2),<a name="_Hlk147401207"> ТОО «Ghalam» (6),</a> РГП на ПХВ «Казахский
+научный центр дерматологии и инфекционных заболеваний» МЗ РК (8), Инфракос» <a
+name="_Hlk147401241">Аэрокосмического комитета Министерства цифрового развития,
+инноваций и аэрокосмической промышленности РК</a> (8).</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Áîëüøå âñåãî
-ïóáëèêàöèé â ìåæäóíàðîäíûõ ðåöåíçèðóåìûõ èçäàíèÿõ <span lang=EN-US>Web</span><span
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Больше всего
+публикаций в международных рецензируемых изданиях <span lang=EN-US>Web</span><span
 lang=EN-US> </span><span lang=EN-US>of</span><span lang=EN-US> </span><span
 lang=EN-US>Knowledge</span>, <span lang=EN-US>Scopus</span>, <span lang=EN-US>Springer</span>
-â ÒÎÎ «Íàöèîíàëüíûé öåíòð áèîòåõíîëîãèè» (101), ÐÃÏ «Íàöèîíàëüíûé öåíòð ïî
-êîìïëåêñíîé ïåðåðàáîòêå ìèíåðàëüíîãî ñûðüÿ Ðåñïóáëèêè Êàçàõñòàí» (68), ÀÎ
-«Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò îíêîëîãèè è ðàäèîëîãèè» (63), ÒÎÎ
-«Àñòðîôèçè÷åñêèé èíñòèòóò èìåíè Â.Ã. Ôåñåíêîâà» (58), ÐÃÏ
-«Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì áèîëîãè÷åñêîé áåçîïàñíîñòè» (54), ÀÎ
-«Íàó÷íûé öåíòð ïðîòèâîèíôåêöèîííûõ ïðåïàðàòîâ» (47), Íàöèîíàëüíûé íàó÷íûé öåíòð
-îñîáî îïàñíûõ èíôåêöèé èì. Ì.Àéêèìáàåâà (35), ÀÎ «Íàöèîíàëüíûé öåíòð
-íåéðîõèðóðãèè» (34), ÀÎ «Íàó÷íûé öåíòð ïåäèàòðèè è äåòñêîé õèðóðãèè» (32).</p>
+в ТОО «Национальный центр биотехнологии» (101), РГП «Национальный центр по
+комплексной переработке минерального сырья Республики Казахстан» (68), АО
+«Казахский научно-исследовательский институт онкологии и радиологии» (63), ТОО
+«Астрофизический институт имени В.Г. Фесенкова» (58), РГП
+«Научно-исследовательский институт проблем биологической безопасности» (54), АО
+«Научный центр противоинфекционных препаратов» (47), Национальный научный центр
+особо опасных инфекций им. М.Айкимбаева (35), АО «Национальный центр
+нейрохирургии» (34), АО «Научный центр педиатрии и детской хирургии» (32).</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
-lang=KZ>1.</span></b><b>5.4 Öèòèðóåìîñòü íàó÷íûõ îðãàíèçàöèé â áàçå äàííûõ Web
-of Science, Scopus çà 2021-2023 ãã.</b></p>
+lang=KZ>1.</span></b><b>5.4 Цитируемость научных организаций в базе данных Web
+of Science, Scopus за 2021-2023 гг.</b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Öèòèðóåìîñòü
-òðóäîâ</b><b><span lang=KZ>. </span></b>Âûñîêèé Èíäåêñ Õèðøà èìåþò ó÷åíûå ÒÎÎ
-«Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé âåòåðèíàðíûé èíñòèòóò» (21 ÷åë. îò 1 äî 8),
-ÒÎÎ «Íàöèîíàëüíûé Íàó÷íûé Îíêîëîãè÷åñêèé Öåíòð» (13 ÷åë. îò 1 äî 7), ÀÎ
-«Íàó÷íûé öåíòð àêóøåðñòâà, ãèíåêîëîãèè è ïåðèíàòîëîãèè» (13 ÷åë. îò 1 äî 5).</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Цитируемость
+трудов</b><b><span lang=KZ>. </span></b>Высокий Индекс Хирша имеют ученые ТОО
+«Казахский научно-исследовательский ветеринарный институт» (21 чел. от 1 до 8),
+ТОО «Национальный Научный Онкологический Центр» (13 чел. от 1 до 7), АО
+«Научный центр акушерства, гинекологии и перинатологии» (13 чел. от 1 до 5).</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Îðãàíèçàöèÿìè áûëè ïðåäñòàâëåíû ðàçíûå äàííûå, öèòèðóåìîñòü ïðèâåäåíà
-çà ïîñëåäíèå 5 è áîëåå ëåò. Ïîýòîìó âûáîðî÷íî ïðîâåäåíà ïðîâåðêà áàç äàííûõ
-(Ïðèëîæåíèå 1.5.4).</span></p>
+lang=KZ>Организациями были представлены разные данные, цитируемость приведена
+за последние 5 и более лет. Поэтому выборочно проведена проверка баз данных
+(Приложение 1.5.4).</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Êîëè÷åñòâî öèòèðîâàíèé ïî áàçå äàííûõ Web of Science çà ïîñëåäíèå 3
-ãîäà ñîñòàâëÿåò: ÒÎÎ «Íàöèîíàëüíûé öåíòð áèîòåõíîëîãèè» - 183, ÀÎ «Êàçàõñêèé
-íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò îíêîëîãèè è ðàäèîëîãèè» - </span>118<span
-lang=KZ>, ÒÎÎ «Àñòðîôèçè÷åñêèé èíñòèòóò èìåíè Â.Ã. Ôåñåíêîâà» - 58, ÐÃÏ íà ÏÕÂ
-«Èíñòèòóò áîòàíèêè è ôèòîèíòðîäóêöèè»</span> - 37, <span lang=KZ>ÒÎÎ
-«Íàöèîíàëüíûé Íàó÷íûé Îíêîëîãè÷åñêèé Öåíòð» - 22, ÒÎÎ «Èíñòèòóò èîíîñôåðû» -
+lang=KZ>Количество цитирований по базе данных Web of Science за последние 3
+года составляет: ТОО «Национальный центр биотехнологии» - 183, АО «Казахский
+научно-исследовательский институт онкологии и радиологии» - </span>118<span
+lang=KZ>, ТОО «Астрофизический институт имени В.Г. Фесенкова» - 58, РГП на ПХВ
+«Институт ботаники и фитоинтродукции»</span> - 37, <span lang=KZ>ТОО
+«Национальный Научный Онкологический Центр» - 22, ТОО «Институт ионосферы» -
 19.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Êîëè÷åñòâî öèòèðîâàíèé ïî áàçå äàííûõ Scopus çà ïîñëåäíèå 3 ãîäà
-ñîñòàâëÿåò: ÒÎÎ «Àñòðîôèçè÷åñêèé èíñòèòóò èìåíè Â.Ã. Ôåñåíêîâà» - 474, ÐÃÏ íà
-ÏÕÂ «Èíñòèòóò áîòàíèêè è ôèòîèíòðîäóêöèè» - 39, ÒÎÎ «Èíñòèòóò èîíîñôåðû» - 28,
-ÀÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò îíêîëîãèè è ðàäèîëîãèè» - 14.</span></p>
+lang=KZ>Количество цитирований по базе данных Scopus за последние 3 года
+составляет: ТОО «Астрофизический институт имени В.Г. Фесенкова» - 474, РГП на
+ПХВ «Институт ботаники и фитоинтродукции» - 39, ТОО «Институт ионосферы» - 28,
+АО «Казахский научно-исследовательский институт онкологии и радиологии» - 14.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Íèæå ïðèâåäåíû äàííûå, ïðåäñòàâëåííûå îðãàíèçàöèÿìè. Öèòèðóåìîñòü
-òðóäîâ îðãàíèçàöèè ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé íàó÷íûé öåíòð îñîáî îïàñíûõ
-èíôåêöèé èì. Ì.Àéêèìáàåâà»çà ïîñëåäíèå 3 ãîäà ñîñòàâèëà 1570, </span></p>
+lang=KZ>Ниже приведены данные, представленные организациями. Цитируемость
+трудов организации РГП на ПХВ «Национальный научный центр особо опасных
+инфекций им. М.Айкимбаева»за последние 3 года составила 1570, </span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÐÃÏ «Íàöèîíàëüíûé öåíòð ïî êîìïëåêñíîé ïåðåðàáîòêå ìèíåðàëüíîãî ñûðüÿ
-Ðåñïóáëèêè Êàçàõñòàí»: êîëè÷åñòâî ñòàòåé è îáçîðîâ ñ àôôèëèàöèåé ÍÈÈ â
-ðåöåíçèðóåìûõ íàó÷íûõ æóðíàëàõ, èíäåêñèðóåìûõ â ìåæäóíàðîäíîé áàçå äàííûõ Web
-of Science çà 2021-2022 ãîäû - 220, Scopus – 1963.</span></p>
+lang=KZ>РГП «Национальный центр по комплексной переработке минерального сырья
+Республики Казахстан»: количество статей и обзоров с аффилиацией НИИ в
+рецензируемых научных журналах, индексируемых в международной базе данных Web
+of Science за 2021-2022 годы - 220, Scopus – 1963.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÀÎ «Íàó÷íûé öåíòð ïåäèàòðèè è äåòñêîé õèðóðãèè»: öèòèðîâàíèÿ Scopus çà
-3 ãîäà – 639, öèòèðîâàíèÿ Google Scholar – 843, Èíäåêñ Õèðøà ïî äàííûì Web of
-Knowledge, Scopus çà 8 ìåñÿöåâ 2023 ã. – 26, ïî äàííûì Google Scholar – 27.</span></p>
+lang=KZ>АО «Научный центр педиатрии и детской хирургии»: цитирования Scopus за
+3 года – 639, цитирования Google Scholar – 843, Индекс Хирша по данным Web of
+Knowledge, Scopus за 8 месяцев 2023 г. – 26, по данным Google Scholar – 27.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
 lang=KZ>&nbsp;</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
-lang=KZ>1.5.5 </span></b><b>Êîëè÷åñòâî îõðàííûõ äîêóìåíòîâ</b><b> </b></p>
+lang=KZ>1.5.5 </span></b><b>Количество охранных документов</b><b> </b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
 lang=KZ>&nbsp;</span></b></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íàó÷íûìè
-îðãàíèçàöèÿìè áûëè ïîëó÷åíû <b>îõðàííûå äîêóìåíòû</b> - ïàòåíòû êàê
-Åâðàçèéñêèå, òàê è îòå÷åñòâåííûå, àâòîðñêèå ñâèäåòåëüñòâà. Íàèáîëüøåå
-êîëè÷åñòâî ïàòåíòîâ ïðèíàäëåæèò: ÒÎÎ «R&amp;D öåíòð «Êàçàõñòàí èíæèíèðèíã»
-(38), <a name="_Hlk147402377">ÒÎÎ «R&amp;D öåíòð «Êàçàõñòàí èíæèíèðèíã» (38),</a>
-ÐÃÏ «Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì áèîëîãè÷åñêîé áåçîïàñíîñòè»
-(35), <span lang=KZ>ÒÎÎ «Íàöèîíàëüíûé öåíòð áèîòåõíîëîãèè» (27), </span><span
-lang=KZ>ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé öåíòð îáùåñòâåííîãî çäðàâîîõðàíåíèÿ» ÌÇ ÐÊ
-(26), ÒÎÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé âåòåðèíàðíûé èíñòèòóò» (21),</span><span
-lang=KZ> </span><span style='background:white'>ÐÃÏ «Íàöèîíàëüíûé öåíòð ïî
-êîìïëåêñíîé ïåðåðàáîòêå ìèíåðàëüíîãî ñûðüÿ Ðåñïóáëèêè Êàçàõñòàí» (18), </span><span
-lang=KZ>ÀÎ «Íàó÷íûé öåíòð àêóøåðñòâà, ãèíåêîëîãèè è ïåðèíàòîëîãèè» (17).</span></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Научными
+организациями были получены <b>охранные документы</b> - патенты как
+Евразийские, так и отечественные, авторские свидетельства. Наибольшее
+количество патентов принадлежит: ТОО «R&amp;D центр «Казахстан инжиниринг»
+(38), <a name="_Hlk147402377">ТОО «R&amp;D центр «Казахстан инжиниринг» (38),</a>
+РГП «Научно-исследовательский институт проблем биологической безопасности»
+(35), <span lang=KZ>ТОО «Национальный центр биотехнологии» (27), </span><span
+lang=KZ>РГП на ПХВ «Национальный центр общественного здравоохранения» МЗ РК
+(26), ТОО «Казахский научно-исследовательский ветеринарный институт» (21),</span><span
+lang=KZ> </span><span style='background:white'>РГП «Национальный центр по
+комплексной переработке минерального сырья Республики Казахстан» (18), </span><span
+lang=KZ>АО «Научный центр акушерства, гинекологии и перинатологии» (17).</span></p>
 
 <p style='margin:0cm;margin-bottom:.0001pt;text-align:justify;text-indent:35.45pt;
-background:white'><span lang=KZ style='font-size:14.0pt'>Íàèìåíüøåå êîëè÷åñòâî
-îõðàííûõ äîêóìåíòîâ èìåþò:</span><span lang=KZ style='font-size:14.0pt'> </span><span
-style='font-size:14.0pt'>ÐÃÏ «Èíôðàêîñ» Àýðîêîñìè÷åñêîãî êîìèòåòà Ìèíèñòåðñòâà
-öèôðîâîãî ðàçâèòèÿ, èííîâàöèé è àýðîêîñìè÷åñêîé ïðîìûøëåííîñòè</span><span
+background:white'><span lang=KZ style='font-size:14.0pt'>Наименьшее количество
+охранных документов имеют:</span><span lang=KZ style='font-size:14.0pt'> </span><span
+style='font-size:14.0pt'>РГП «Инфракос» Аэрокосмического комитета Министерства
+цифрового развития, инноваций и аэрокосмической промышленности</span><span
 style='font-size:14.0pt'> (1),</span><a name="_Hlk147401267"><span
-style='font-size:14.0pt'> </span></a><span style='font-size:14.0pt'>ÀÎ
-«Íàöèîíàëüíàÿ Êîìïàíèÿ «&#1178;àçà&#1179;ñòàí &#1170;àðûø Ñàïàðû» (1), ÐÃÏ íà
-ÏÕÂ «Êàçàõñêèé íàó÷íûé öåíòð äåðìàòîëîãèè è èíôåêöèîííûõ çàáîëåâàíèé» (1).</span>
-<span style='font-size:14.0pt'>ÐÃÏ íà ÏÕÂ «Èíñòèòóò áîòàíèêè è ôèòîèíòðîäóêöèè»
-(2), ÀÎ &quot;Íàöèîíàëüíûé öåíòð êîñìè÷åñêèõ èññëåäîâàíèé è òåõíîëîãèé&quot;
-Àýðîêîñìè÷åñêîãî êîìèòåòà ÌÖÐÈÀÏ ÐÊ (2).</span></p>
+style='font-size:14.0pt'> </span></a><span style='font-size:14.0pt'>АО
+«Национальная Компания «&#1178;аза&#1179;стан &#1170;арыш Сапары» (1), РГП на
+ПХВ «Казахский научный центр дерматологии и инфекционных заболеваний» (1).</span>
+<span style='font-size:14.0pt'>РГП на ПХВ «Институт ботаники и фитоинтродукции»
+(2), АО &quot;Национальный центр космических исследований и технологий&quot;
+Аэрокосмического комитета МЦРИАП РК (2).</span></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íå èìåþò
-îõðàííûõ äîêóìåíòîâ: ÒÎÎ «Àñòðîôèçè÷åñêèé èíñòèòóò èìåíè Â.Ã. Ôåñåíêîâà», ÒÎÎ
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Не имеют
+охранных документов: ТОО «Астрофизический институт имени В.Г. Фесенкова», ТОО
 «OtarBioPharm».</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Âíåäðåíèå
-íàó÷íûõ ðàçðàáîòîê</b></p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Внедрение
+научных разработок</b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ style='background:white'>Èç ïðåäñòàâëåííûõ îðãàíèçàöèé èìåþò <b>àêòû
-âíåäðåíèÿ</b>: </span><a name="_Hlk147398517">ÀÎ «Íàó÷íûé öåíòð ïåäèàòðèè è
-äåòñêîé õèðóðãèè» (95), </a><span lang=KZ>ÀÎ «Êàçàõñêèé
-íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò îíêîëîãèè è ðàäèîëîãèè» (77),</span><span
-lang=KZ> </span>Íàöèîíàëüíûé íàó÷íûé öåíòð îñîáî îïàñíûõ èíôåêöèé èì.
-Ì.Àéêèìáàåâà (45),<a name="_Hlk147398478"><span lang=KZ> ÒÎÎ «Êàçàõñêèé
-íàó÷íî-èññëåäîâàòåëüñêèé âåòåðèíàðíûé èíñòèòóò» (31), ÒÎÎ «Íàöèîíàëüíûé öåíòð
-áèîòåõíîëîãèè» (21)</span></a><span lang=KZ>.</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>&nbsp;</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
-lang=KZ>1.5.6 Êîììåðöèàëèçàöèÿ ðåçóëüòàòîâ èññëåäîâàíèé è ðàçðàáîòîê</span></b></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
-lang=KZ>&nbsp;</span></b></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Ïîëó÷åííûå
-îôèöèàëüíûå äîêóìåíòû íà èñïîëüçîâàíèå ðåçóëüòàòîâ íàó÷íî-òåõíè÷åñêîé
-äåÿòåëüíîñòè </b>èìåþò<b> </b>18 îðãàíèçàöèé èëè 35,3% (ïðèëîæåíèå 1.5.7).</p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Êîëè÷åñòâî
-êîììåðöèàëèçèðîâàííûõ ðàçðàáîòîê è èííîâàöèé</b></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Îðãàíèçàöèè
-ïðåäîñòàâèëè 47 ïðîåêòîâ <b>íà êîììåðöèàëèçàöèþ</b>, â ò.÷. ÐÃÏ íà ÏÕÂ
-«Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì áèîëîãè÷åñêîé áåçîïàñíîñòè» ÌÇ ÐÊ
-(31 ïðåïàðàò), ÒÎÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé âåòåðèíàðíûé èíñòèòóò»
-(31 ïðåïàðàò). ÒÎÎ «Ðåñïóáëèêàíñêàÿ êîëëåêöèÿ ìèêðîîðãàíèçìîâ» (6 âèäîâ
-òåñò-ñèñòåì).</p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÐÃÏ íà ÏÕÂ «Èíñòèòóò áîòàíèêè è ôèòîèíòðîäóêöèè» âûïîëíåíî 20
-õîçäîãîâîðíûõ  íàó÷íûõ ïðîåêòîâ.</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>ÒÎÎ
-«Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé âåòåðèíàðíûé èíñòèòóò» èìååò
-ðåãèñòðàöèîííûå óäîñòîâåðåíèÿ íà 7 ðàçðàáîòàííûõ ïðåïàðàòîâ, âíåñåííûõ â
-Ãîñóäàðñòâåííûé ðååñòð âåòåðèíàðíûõ ïðåïàðàòîâ ÐÊ.</p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>ÐÃÏ
-«Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì áèîëîãè÷åñêîé áåçîïàñíîñòè»
-ðàçðàáîòàíî 6 âàêöèí. </p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Â ðàìêàõ
-ïðîåêòîâ ïî êîììåðöèàëèçàöèè ÒÎÎ «Íàó÷íî-ïðîèçâîäñòâåííûé öåíòð ðûáíîãî
-õîçÿéñòâà» êîììåðöèàëèçîâàíî 2 ïðîåêòà.</p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>ÐÃÏ
-«Íàöèîíàëüíûé öåíòð ïî êîìïëåêñíîé ïåðåðàáîòêå ìèíåðàëüíîãî ñûðüÿ Ðåñïóáëèêè
-Êàçàõñòàí», ÒÎÎ «Ðåñïóáëèêàíñêàÿ êîëëåêöèÿ ìèêðîîðãàíèçìîâ» ïîëó÷åíî 2 äîêóìåíòà.</p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Â ÒÎÎ
-«Àêòþáèíñêàÿ ÑÕÎÑ» èìåþòñÿ àêòû âíåäðåíèÿ íà ÐÍÒÄ â ñåìõîç ÒÎÎ
-&quot;ÄèËýíä&quot;: 2 ðàçðàáîòêè - íîâûå ñåëåêöèîííûå äîñòèæåíèÿ - ñîðòà ÿðîâîé
-ïøåíèöû è îäíà òåõíîëîãèÿ âûðàùèâàíèÿ ñàôëîðà</p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Â ÊàçÍÈÈÑÀ ðàáîòû ïî êîììåðöèàëèçàöèè íàó÷íûõ èññëåäîâàíèé íå
-âûïîëíÿþòñÿ ââèäó îòñóòñòâèÿ òàêîãî âèäà äåÿòåëüíîñòè â Óñòàâå èíñòèòóòà.</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>28 íàó÷íûõ îðãàíèçàöèé èëè 55% ïðîåêòîâ íà êîììåðöèàëèçàöèþ íå èìåþò.</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
-lang=KZ>Îáúåì ïîëó÷åííîé ïðèáûëè. </span></b><span lang=KZ>Òîëüêî 12
-îðãàíèçàöèé èëè 23,5% ïîëó÷èëè ïðèáûëü â ðåçóëüòàòå êîììåðöèàëèçàöèè ÐÍÍÒÄ.</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÒÎÎ «Ðåñïóáëèêàíñêàÿ êîëëåêöèÿ ìèêðîîðãàíèçìîâ» îò ïðîäàæè
-ðàçðàáîòàííûõ 6 íàáîðîâ ÏÖÐ òåñò-ñèñòåì ïîëó÷èëà ïðèáûëü 1 080 000 òã </span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Â 2022 ã. ÷èñòàÿ ïðèáûëü îò ôèíàíñîâî-õîçÿéñòâåííîé äåÿòåëüíîñòè ÒÎÎ
-«Êàçàõñêèé íàó÷íî – èññëåäîâàòåëüñêèé èíñòèòóò âîäíîãî õîçÿéñòâà» ñîñòàâèëà 1
-245,0 òûñ. òåíãå, â 2021 ã. - 13 395,0 òûñ. òåíãå, â 2020 ã. - 5 214,0 òûñ.
-òåíãå.</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÄÒÎÎ «Èíñòèòóò êîñìè÷åñêîé òåõíèêè è òåõíîëîãèé» â 2020 ã. ïîëó÷èëà
-1363 òûñ. òåíãå; 2021 ã. - 133 òûñ. òåíãå; 2022 ã. - 23000 òûñÿ÷è òåíãå.</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÐÃÏ íà ÏÕÂ «Èíñòèòóò áîòàíèêè è ôèòîèíòðîäóêöèè» ïîëó÷èëà 118 771,7
-òûñ. òã.</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÒÎÎ «Íàó÷íî-ïðîèçâîäñòâåííûé öåíòð ðûáíîãî õîçÿéñòâà» ðåàëèçîâàíî 2
-ìëí. 845 òûñ. øò. (ñåãîëåòîê) íà ñóììó 113,5 ìëí.òã., 46,9 òûñ.øò. (ñåãîëåòîê è
-ëè÷èíîê) íà ñóììó 33,7 ìëí.òã.</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÐÃÏ «Íàöèîíàëüíûé öåíòð ïî êîìïëåêñíîé ïåðåðàáîòêå ìèíåðàëüíîãî ñûðüÿ
-Ðåñïóáëèêè Êàçàõñòàí» - 89&nbsp;145&nbsp;000 òåíãå.</span></p>
-
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Â ðåçóëüòàòå âíåäðåíèÿ ðàçðàáîòîê ÒÎÎ «Àêòþáèíñêàÿ ÑÕÎÑ» ïîëó÷åíû: 1)
-Äîïîëíèòåëüíàÿ ÷èñòàÿ ïðèáûëü ïðè óáîðêå íîâûõ ñîðòîâ ïøåíèöû â çàâèñèìîñòè îò
-óñëîâèé ãîäà ñîñòàâèëà 25000 - 40 000 òåíãå ñ 1 ãà. 2) Â ÒÎÎ «Íîñåð» Àëãèíñêîãî
-ðàéîíà, Àêòþáèíñêîé îáëàñòè ïðèáàâêà óðîæàÿ ñàôëîðà ñîñòàâèëà 2,3 ö/ãà èëè
-25,8%. 3) Â êðåñòüÿíñêîì õîçÿéñòâå «Äèíà» Ìàðòóêñêîãî ðàéîíà, Àêòþáèíñêîé
-îáëàñòè ïðèáàâêà óðîæàÿ ñàôëîðà ñîñòàâèëà 3,5 ö/ãà èëè 32,1%.</span></p>
+lang=KZ style='background:white'>Из представленных организаций имеют <b>акты
+внедрения</b>: </span><a name="_Hlk147398517">АО «Научный центр педиатрии и
+детской хирургии» (95), </a><span lang=KZ>АО «Казахский
+научно-исследовательский институт онкологии и радиологии» (77),</span><span
+lang=KZ> </span>Национальный научный центр особо опасных инфекций им.
+М.Айкимбаева (45),<a name="_Hlk147398478"><span lang=KZ> ТОО «Казахский
+научно-исследовательский ветеринарный институт» (31), ТОО «Национальный центр
+биотехнологии» (21)</span></a><span lang=KZ>.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
 lang=KZ>&nbsp;</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
-lang=KZ>1.5.7 Âõîæäåíèå â ðåéòèíãè ýêñïåðòíûõ öåíòðîâ</span></b></p>
+lang=KZ>1.5.6 Коммерциализация результатов исследований и разработок</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
+lang=KZ>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Полученные
+официальные документы на использование результатов научно-технической
+деятельности </b>имеют<b> </b>18 организаций или 35,3% (приложение 1.5.7).</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Количество
+коммерциализированных разработок и инноваций</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Организации
+предоставили 47 проектов <b>на коммерциализацию</b>, в т.ч. РГП на ПХВ
+«Научно-исследовательский институт проблем биологической безопасности» МЗ РК
+(31 препарат), ТОО «Казахский научно-исследовательский ветеринарный институт»
+(31 препарат). ТОО «Республиканская коллекция микроорганизмов» (6 видов
+тест-систем).</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>РГП на ПХВ «Институт ботаники и фитоинтродукции» выполнено 20
+хоздоговорных  научных проектов.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>ТОО
+«Казахский научно-исследовательский ветеринарный институт» имеет
+регистрационные удостоверения на 7 разработанных препаратов, внесенных в
+Государственный реестр ветеринарных препаратов РК.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>РГП
+«Научно-исследовательский институт проблем биологической безопасности»
+разработано 6 вакцин. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>В рамках
+проектов по коммерциализации ТОО «Научно-производственный центр рыбного
+хозяйства» коммерциализовано 2 проекта.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>РГП
+«Национальный центр по комплексной переработке минерального сырья Республики
+Казахстан», ТОО «Республиканская коллекция микроорганизмов» получено 2 документа.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>В ТОО
+«Актюбинская СХОС» имеются акты внедрения на РНТД в семхоз ТОО
+&quot;ДиЛэнд&quot;: 2 разработки - новые селекционные достижения - сорта яровой
+пшеницы и одна технология выращивания сафлора</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>В КазНИИСА работы по коммерциализации научных исследований не
+выполняются ввиду отсутствия такого вида деятельности в Уставе института.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>28 научных организаций или 55% проектов на коммерциализацию не имеют.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
+lang=KZ>Объем полученной прибыли. </span></b><span lang=KZ>Только 12
+организаций или 23,5% получили прибыль в результате коммерциализации РННТД.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>ТОО «Республиканская коллекция микроорганизмов» от продажи
+разработанных 6 наборов ПЦР тест-систем получила прибыль 1 080 000 тг </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>В 2022 г. чистая прибыль от финансово-хозяйственной деятельности ТОО
+«Казахский научно – исследовательский институт водного хозяйства» составила 1
+245,0 тыс. тенге, в 2021 г. - 13 395,0 тыс. тенге, в 2020 г. - 5 214,0 тыс.
+тенге.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>ДТОО «Институт космической техники и технологий» в 2020 г. получила
+1363 тыс. тенге; 2021 г. - 133 тыс. тенге; 2022 г. - 23000 тысячи тенге.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>РГП на ПХВ «Институт ботаники и фитоинтродукции» получила 118 771,7
+тыс. тг.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>ТОО «Научно-производственный центр рыбного хозяйства» реализовано 2
+млн. 845 тыс. шт. (сеголеток) на сумму 113,5 млн.тг., 46,9 тыс.шт. (сеголеток и
+личинок) на сумму 33,7 млн.тг.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>РГП «Национальный центр по комплексной переработке минерального сырья
+Республики Казахстан» - 89&nbsp;145&nbsp;000 тенге.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>В результате внедрения разработок ТОО «Актюбинская СХОС» получены: 1)
+Дополнительная чистая прибыль при уборке новых сортов пшеницы в зависимости от
+условий года составила 25000 - 40 000 тенге с 1 га. 2) В ТОО «Носер» Алгинского
+района, Актюбинской области прибавка урожая сафлора составила 2,3 ц/га или
+25,8%. 3) В крестьянском хозяйстве «Дина» Мартукского района, Актюбинской
+области прибавка урожая сафлора составила 3,5 ц/га или 32,1%.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=KZ>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
+lang=KZ>1.5.7 Вхождение в рейтинги экспертных центров</span></b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
 lang=KZ>&nbsp;</span></b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Â ðåéòèíãè ýêñïåðòíûõ ñîâåòîâ âõîäÿò òîëüêî 3 îðãàíèçàöèè (6%)
-(ïðèëîæåíèå 1.5.8).</span></p>
+lang=KZ>В рейтинги экспертных советов входят только 3 организации (6%)
+(приложение 1.5.8).</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÒÎÎ «Àñòðîôèçè÷åñêèé èíñòèòóò èìåíè Â.Ã. Ôåñåíêîâà» ñîãëàñíî äàííûì Web
-of Science™ Clarivate Analytics èìååò ðåéòèíã 4, ñîãëàñíî äàííûì Scopus Preview
-- ðåéòèíã 4.</span></p>
+lang=KZ>ТОО «Астрофизический институт имени В.Г. Фесенкова» согласно данным Web
+of Science™ Clarivate Analytics имеет рейтинг 4, согласно данным Scopus Preview
+- рейтинг 4.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÐÃÏ «Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì áèîëîãè÷åñêîé
-áåçîïàñíîñòè»</span> â í<span lang=KZ>àöèîíàëüíîì ðåéòèíãå ïî èíäåêñó Õèðøà
-2023 çàíèìàåò 50 ïîçèöèþ.</span></p>
+lang=KZ>РГП «Научно-исследовательский институт проблем биологической
+безопасности»</span> в н<span lang=KZ>ациональном рейтинге по индексу Хирша
+2023 занимает 50 позицию.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÀÎ «Íàó÷íûé öåíòð àêóøåðñòâà, ãèíåêîëîãèè è ïåðèíàòîëîãèè» -ðåéòèíãîâàÿ
-ïîçèöèÿ íàó÷íîé îðãàíèçàöèè ñðåäè íàó÷íûõ ìåäèöèíñêèõ îðãàíèçàöèé â 2021 ãîäó –
+lang=KZ>АО «Научный центр акушерства, гинекологии и перинатологии» -рейтинговая
+позиция научной организации среди научных медицинских организаций в 2021 году –
 8.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
 lang=KZ>&nbsp;</span></b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
-lang=KZ>1.5.8 Àíàëèç è îöåíêà äåÿòåëüíîñòè ÍÈÈ è ÍÖ, ïðîâåäåííàÿ óïîëíîìî÷åííûì
-îðãàíîì â ñôåðå íàóêè</span></b></p>
+lang=KZ>1.5.8 Анализ и оценка деятельности НИИ и НЦ, проведенная уполномоченным
+органом в сфере науки</span></b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
 lang=KZ>&nbsp;</span></b></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Â îñíîâíîì îöåíêà äåÿòåëüíîñòè â îðãàíèçàöèÿõ ïðîâîäèëàñü ÍÖÃÍÒÝ,
-èìåþòñÿ ïîëîæèòåëüíûå çàêëþ÷åíèÿ (ïðèëîæåíèå 1.5.9).</span></p>
+lang=KZ>В основном оценка деятельности в организациях проводилась НЦГНТЭ,
+имеются положительные заключения (приложение 1.5.9).</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Òàêæå ïðîâåäåí Ãîñóäàðñòâåííûé àóäèò Äåïàðòàìåíòîì âíóòðåííåãî àóäèòà
-ÌÇ ÐÊ äåÿòåëüíîñòè ÀÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò îíêîëîãèè è
-ðàäèîëîãèè».</span></p>
+lang=KZ>Также проведен Государственный аудит Департаментом внутреннего аудита
+МЗ РК деятельности АО «Казахский научно-исследовательский институт онкологии и
+радиологии».</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>French Cert UK Ltd. ïðîâåäåí ðåñåðòèôèêàöèîííûé àóäèò, ïîëó÷åí
-ñåðòèôèêàò GMP î òîì, ÷òî ÐÃÏ «Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì
-áèîëîãè÷åñêîé áåçîïàñíîñòè» ñîîòâåòñòâóåò òðåáîâàíèÿì, ïðèìåíèìûì ê íåé â
-ñîîòâåòñòâèè ñ ðóêîâîäÿùèìè ïðèíöèïàìè GMP (Êîäåêñ íàäëåæàùåé ïðîèçâîäñòâåííîé
-ïðàêòèêè) Äëÿ ñëåäóþùåé îáëàñòè ïðèìåíåíèÿ: &quot;Ðàçðàáîòêà è ïðîèçâîäñòâî
-ìåäèöèíñêèõ, âåòåðèíàðíûõ âàêöèí è ëåêàðñòâåííûõ ïðåïàðàòîâ&quot; 21.08.2023 ã.</span></p>
+lang=KZ>French Cert UK Ltd. проведен ресертификационный аудит, получен
+сертификат GMP о том, что РГП «Научно-исследовательский институт проблем
+биологической безопасности» соответствует требованиям, применимым к ней в
+соответствии с руководящими принципами GMP (Кодекс надлежащей производственной
+практики) Для следующей области применения: &quot;Разработка и производство
+медицинских, ветеринарных вакцин и лекарственных препаратов&quot; 21.08.2023 г.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Çàêàç÷èêîì (ÌÑÕ ÐÊ) ïðîâåðåí õîä âûïîëíåíèÿ ðàáîò ïî
-ïðîãðàììíî-öåëåâîìó ôèíàíñèðîâàíèþ ÒÎÎ «Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé
-âåòåðèíàðíûé èíñòèòóò».</span></p>
+lang=KZ>Заказчиком (МСХ РК) проверен ход выполнения работ по
+программно-целевому финансированию ТОО «Казахский научно-исследовательский
+ветеринарный институт».</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>Ïðîøëè àêêðåäèòàöèþ è ïîëó÷èëè ñâèäåòåëüñòâî îá àêêðåäèòàöèè ñóáúåêòà
-íàó÷íîé è (èëè) íàó÷íî-òåõíè÷åñêîé äåÿòåëüíîñòè: ÀÎ «Êàçàõñòàíñêèé äîðîæíûé
-íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò», ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé íàó÷íûé öåíòð
-ôòèçèîïóëüìîíîëîãèè Ðåñïóáëèêè Êàçàõñòàí» ÌÇ ÐÊ, ÐÃÏ íà ÏÕÂ «Êàçàõñêèé íàó÷íûé
-öåíòð äåðìàòîëîãèè è èíôåêöèîííûõ çàáîëåâàíèé» ÌÇ ÐÊ, ÐÃÏ
-«Íàó÷íî-èññëåäîâàòåëüñêèé èíñòèòóò ïðîáëåì áèîëîãè÷åñêîé áåçîïàñíîñòè»,</span><span
-lang=KZ> </span><span lang=KZ>ÐÃÏ íà ÏÕÂ «Íàöèîíàëüíûé íàó÷íûé öåíòð
-òðàâìàòîëîãèè è îðòîïåäèè èìåíè àêàäåìèêà Áàòïåíîâà Í.Ä.» ÌÇ ÐÊ, ÒÎÎ
-«Ðåñïóáëèêàíñêàÿ êîëëåêöèÿ ìèêðîîðãàíèçìîâ».</span></p>
+lang=KZ>Прошли аккредитацию и получили свидетельство об аккредитации субъекта
+научной и (или) научно-технической деятельности: АО «Казахстанский дорожный
+научно-исследовательский институт», РГП на ПХВ «Национальный научный центр
+фтизиопульмонологии Республики Казахстан» МЗ РК, РГП на ПХВ «Казахский научный
+центр дерматологии и инфекционных заболеваний» МЗ РК, РГП
+«Научно-исследовательский институт проблем биологической безопасности»,</span><span
+lang=KZ> </span><span lang=KZ>РГП на ПХВ «Национальный научный центр
+травматологии и ортопедии имени академика Батпенова Н.Д.» МЗ РК, ТОО
+«Республиканская коллекция микроорганизмов».</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
-lang=KZ>ÀÎ «Íàó÷íûé öåíòð ïåäèàòðèè è äåòñêîé õèðóðãèè» - ñîãëàñíî àíàëèçó è
-îöåíêå íàó÷íîé è èííîâàöèîííîé äåÿòåëüíîñòè ÍÈÈ è ÍÖ, ïðîâåäåííûì Íàöèîíàëüíûì
-íàó÷íûì öåíòðîì ðàçâèòèÿ çäðàâîîõðàíåíèÿ èìåíè Ñàëèäàò Êàèðáåêîâîé â äèíàìèêå
-íàó÷íàÿ è ïóáëèêàöèîííàÿ àêòèâíîñòü ñîòðóäíèêîâ è öåíòðà óâåëè÷èëàñü ïî âñåì
-ïîêàçàòåëÿì. Òàê, ïî èòîãàì ðåéòèíãà â 2022 ãîäó ÍÖÏÄÕ ïîäíÿëñÿ ñ 15 ìåñòà íà 7
-ìåñòî.</span></p>
+lang=KZ>АО «Научный центр педиатрии и детской хирургии» - согласно анализу и
+оценке научной и инновационной деятельности НИИ и НЦ, проведенным Национальным
+научным центром развития здравоохранения имени Салидат Каирбековой в динамике
+научная и публикационная активность сотрудников и центра увеличилась по всем
+показателям. Так, по итогам рейтинга в 2022 году НЦПДХ поднялся с 15 места на 7
+место.</span></p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><i><span
-lang=KZ>Âûâîäû</span></i><i>:</i><i> </i><span lang=KZ>Â öåëîì, íàó÷íûå
-îðãàíèçàöèè îáëàäàþò íåîáõîäèìûìè ðåñóðñàìè äëÿ ïðîâåäåíèÿ íàó÷íûõ
-èññëåäîâàíèé, ïîëó÷àþò ÏÖÔ è ÃÔ, òàêæå ðàáîòàþò íàä âíåáþäæåòíûìè ïðîåêòàìè,
-ñîâìåñòíûìè ïðåêòàìè ñ çàðóáåæíûìè ïàðòíåðàìè, çàíèìàþòñÿ â ðàìêàõ </span>ìíîãîöåíòðîâû<span
-lang=KZ>õ</span> êëèíè÷åñêè<span lang=KZ>õ</span> èññëåäîâàíè<span lang=KZ>é</span>.</p>
+lang=KZ>Выводы</span></i><i>:</i><i> </i><span lang=KZ>В целом, научные
+организации обладают необходимыми ресурсами для проведения научных
+исследований, получают ПЦФ и ГФ, также работают над внебюджетными проектами,
+совместными пректами с зарубежными партнерами, занимаются в рамках </span>многоцентровы<span
+lang=KZ>х</span> клинически<span lang=KZ>х</span> исследовани<span lang=KZ>й</span>.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Íàó÷íûå
-ñîòðóäíèêè óêàçàííûõ ÍÈÈ ìîãóò âûïîëíÿòü àêòóàëüíûå íàó÷íûå çàäà÷è ÍÈÎÊÐ,
-äîáèâàòüñÿ ðåçóëüòàòîâ, î ÷åì ñâèäåòåëüñòâóþò íàó÷íûå ïóáëèêàöèè, îõðàííûå
-äîêóìåíòû, àêòû âíåäðåíèÿ, à òàêæå êîììåðöèàëèçàöèÿ ïðîåêòîâ.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Научные
+сотрудники указанных НИИ могут выполнять актуальные научные задачи НИОКР,
+добиваться результатов, о чем свидетельствуют научные публикации, охранные
+документы, акты внедрения, а также коммерциализация проектов.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Âìåñòå ñ òåì
-ñëåäóåò îòìåòèòü ñëåäóþùåå:</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Вместе с тем
+следует отметить следующее:</p>
 
 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
 justify;text-indent:35.45pt;line-height:normal'><span style='font-size:14.0pt;
 font-family:"Times New Roman",serif;color:black'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;
 </span></span><span style='font-size:14.0pt;font-family:"Times New Roman",serif;
-color:black'>Íàáëþäàåòñÿ íå âûñîêàÿ îñòåïåíåííîñòü íàó÷íûõ îðãàíèçàöèé. Â
-ñðåäíåì îíà ñîñòàâëÿåò 30,8% è êîëåáëåòñÿ îò 1,9 äî 77,8%. Îñòåïåííåíîñòü
-ïåðâûõ ðóêîâîäèòåëåé – 76,6%, ò.å. 23,4% - íå èìåþò ó÷åíîé ñòåïåíè.</span></p>
+color:black'>Наблюдается не высокая остепененность научных организаций. В
+среднем она составляет 30,8% и колеблется от 1,9 до 77,8%. Остепенненость
+первых руководителей – 76,6%, т.е. 23,4% - не имеют ученой степени.</span></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>36,1% ïåðâûõ
-ðóêîâîäèòåëåé îðãàíèçàöèé íàõîäÿòñÿ â âîçðàñòå äî 50 ëåò. Ìîëîäûå ðóêîâîäèòåëè
-áåç ó÷åíûõ ñòåïåíåé, íàçíà÷àþòñÿ ñðîêîì íà 1-2 ãîäà è íå èìåþò ãîñóäàðñòâåííûõ
-èëè âåäîìñòâåííûõ íàãðàä.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>36,1% первых
+руководителей организаций находятся в возрасте до 50 лет. Молодые руководители
+без ученых степеней, назначаются сроком на 1-2 года и не имеют государственных
+или ведомственных наград.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Ñîòðóäíèêè
-íàó÷íûõ îðãàíèçàöèé ìàëî ïðåäñòàâëÿþòñÿ ê ãîñóäàðñòâåííûì íàãðàäàì, ìàëîå
-êîëè÷åñòâî ïîëó÷àåò æèëüå, ÷òî ñëàáî ìîòèâèðóåò ó÷åíûõ ê íàó÷íîé äåÿòåëüíîñòè.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Сотрудники
+научных организаций мало представляются к государственным наградам, малое
+количество получает жилье, что слабо мотивирует ученых к научной деятельности.</p>
 
 <p class=MsoListParagraphCxSpFirst style='margin:0cm;margin-bottom:.0001pt;
 text-align:justify;text-indent:35.45pt;line-height:normal'><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>2.<span
 style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>Íàó÷íûå îðãàíèçàöèè
-ñ âûñîêîé ÷èñëåííîñòüþ ó÷åíûõ âûïîëíÿþò áîëüøåå êîëè÷åñòâî íàó÷íûõ ïðîåêòîâ.
-Ñîîòâåòñòâåííî âîâëå÷åííîñòü ó÷åíûõ â èññëåäîâàíèÿ, ïóáëèêàöèîííàÿ àêòèâíîñòü
-çäåñü âûøå. Ìàëî÷èñëåííûå îðãàíèçàöèè âûïîëíÿþò ïî 1-2 ïðîåêòà è âî ìíîãîì
-çàâèñÿò îò áàçîâîãî ôèíàíñèðîâàíèÿ. Òîëüêî â äâóõ îðãàíèçàöèÿõ ìîëîäûå ó÷åíûå
-èìåþò ãðàíòû, 17,6% îðãàíèçàöèé âûïîëíÿþò ìåæäóíàðîäíûå ïðîåêòû. </span></p>
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>Научные организации
+с высокой численностью ученых выполняют большее количество научных проектов.
+Соответственно вовлеченность ученых в исследования, публикационная активность
+здесь выше. Малочисленные организации выполняют по 1-2 проекта и во многом
+зависят от базового финансирования. Только в двух организациях молодые ученые
+имеют гранты, 17,6% организаций выполняют международные проекты. </span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin:0cm;margin-bottom:.0001pt;
 text-align:justify;text-indent:35.45pt;line-height:normal'><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>Íå äîñòàòî÷íî âûñîêîé
-îñòàåòñÿ ðåçóëüòàòèâíîñòü èññëåäîâàòåëüñêîé äåÿòåëüíîñòè. Îá ýòîì
-ñâèäåòåëüñòâóåò íèçêîå êîëè÷åñòâî ïàòåíòîâ, àêòîâ âíåäðåíèÿ íàó÷íûõ ðàçðàáîòîê.
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>Не достаточно высокой
+остается результативность исследовательской деятельности. Об этом
+свидетельствует низкое количество патентов, актов внедрения научных разработок.
 </span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin:0cm;margin-bottom:.0001pt;
 text-align:justify;text-indent:35.45pt;line-height:normal'><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>3.<span
 style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>Íèçêîé îñòàåòñÿ
-êîììåðöèàëèçàöèÿ ðåçóëüòàòîâ íàó÷íûõ èññëåäîâàíèé. 55% íàó÷íûõ îðãàíèçàöèé
-ñîâñåì íå èìåþò ïðîåêòîâ íà êîììåðöèàëèçàöèþ, òîëüêî 23,5% îðãàíèçàöèé ïîëó÷èëè
-ïðèáûëü â ðåçóëüòàòå êîììåðöèàëèçàöèè ÐÍÒÄ.</span></p>
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>Низкой остается
+коммерциализация результатов научных исследований. 55% научных организаций
+совсем не имеют проектов на коммерциализацию, только 23,5% организаций получили
+прибыль в результате коммерциализации РНТД.</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin:0cm;margin-bottom:.0001pt;
 text-align:justify;text-indent:35.45pt;line-height:normal'><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>4.<span
 style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>Â ðåéòèíãè
-ýêñïåðòíûõ ñîâåòîâ âõîäÿò òîëüêî 3 îðãàíèçàöèè (6,0%).</span></p>
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>В рейтинги
+экспертных советов входят только 3 организации (6,0%).</span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin:0cm;margin-bottom:.0001pt;
 text-align:justify;text-indent:35.45pt;line-height:normal'><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>5.<span
 style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>Â ïðåäîñòàâëåííûõ
-èíôîðìàöèÿõ îòñóòñòâóþò ñâåäåíèÿ î íàó÷íîé èíôðàñòðóêòóðå, íàëè÷èå ëàáîðàòîðèé,
-èõ îñíàùåííîñòü ñîâðåìåííûì îáîðóäîâàíèåì, ÷òî çàòðóäíÿåò îöåíêó óðîâíÿ
-ìàòåðèàëüíîé áàçû.</span></p>
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>В предоставленных
+информациях отсутствуют сведения о научной инфраструктуре, наличие лабораторий,
+их оснащенность современным оборудованием, что затрудняет оценку уровня
+материальной базы.</span></p>
 
 <p class=MsoListParagraphCxSpLast style='margin:0cm;margin-bottom:.0001pt;
 text-align:justify;text-indent:35.45pt;line-height:normal'><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>6.<span
 style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>Îòäåëüíûìè
-íàó÷íûìè îðãàíèçàöèÿìè ïðåäñòàâëåíû íåïîëíûå äàííûå, ÷òî íå ïîçâîëÿåò
-îáúåêòèâíî îöåíèòü èõ íàó÷íî-èññëåäîâàòåëüñêóþ äåÿòåëüíîñòü (ÐÃÏ íà ÏÕÂ
-&quot;Íàöèîíàëüíûé íàó÷íûé öåíòð ðàçâèòèÿ çäðàâîîõðàíåíèÿ èìåíè Ñàëèäàò
-Êàèðáåêîâîé&quot; ÌÇ ÐÊ; ÒÎÎ «OtarBioPharm», ÀÎ «Íàó÷íî-èññëåäîâàòåëüñêèé
-èíñòèòóò êàðäèîëîãèè è âíóòðåííèõ áîëåçíåé»,</span><span style='font-family:
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>Отдельными
+научными организациями представлены неполные данные, что не позволяет
+объективно оценить их научно-исследовательскую деятельность (РГП на ПХВ
+&quot;Национальный научный центр развития здравоохранения имени Салидат
+Каирбековой&quot; МЗ РК; ТОО «OtarBioPharm», АО «Научно-исследовательский
+институт кардиологии и внутренних болезней»,</span><span style='font-family:
 "Times New Roman",serif'> </span><span style='font-size:14.0pt;font-family:
-"Times New Roman",serif'>ÀÎ &quot;Êàçàõñêèé íàó÷íî-èññëåäîâàòåëüñêèé è ïðîåêòíûé
-èíñòèòóò ñòðîèòåëüñòâà è àðõèòåêòóðû&quot; è äð.).  </span></p>
+"Times New Roman",serif'>АО &quot;Казахский научно-исследовательский и проектный
+институт строительства и архитектуры&quot; и др.).  </span></p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>7. Íåîáõîäèìî
-ðàçðàáîòàòü åäèíóþ ìåòîäèêó îöåíêè äåÿòåëüíîñòè íàó÷íûõ îðãàíèçàöèé, ÷òî
-ïîçâîëèò âûÿâèòü: îðãàíèçàöèè-ëèäåðû; ñòàáèëüíûå îðãàíèçàöèè, äåìîíñòðèðóþùèå
-óäîâëåòâîðèòåëüíóþ ðåçóëüòàòèâíîñòü; îðãàíèçàöèè, óòðàòèâøèå íàó÷íûé ïðîôèëü è
-ïåðñïåêòèâû ðàçâèòèÿ.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>7. Необходимо
+разработать единую методику оценки деятельности научных организаций, что
+позволит выявить: организации-лидеры; стабильные организации, демонстрирующие
+удовлетворительную результативность; организации, утратившие научный профиль и
+перспективы развития.</p>
 
-<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>Â çàêëþ÷åíèè
-ñëåäóåò îòìåòèòü, ÷òî â ðàçðåçå ìèíèñòåðñòâ óðîâíåé òåõíîëîãè÷åñêîé ãîòîâíîñòè
-äîñòèãëè: Ìèíèñòåðñòâî çäðàâîîõðàíåíèÿ: <span lang=EN-US>TRL</span>-9 – 4,
-TRL-8 – 1, TRL-7 – 7, TRL-6 – 2, TRL-4 – 4, TRL-2 – 1 îðãàíèçàöèÿ; Ìèíèñòåðñòâî
-ñåëüñêîãî õîçÿéñòâà: TRL-9 – 10, TRL-8 – 4, TRL-6 – 3 îðãàíèçàöèè; Ìèíèñòåðñòâî
-öèôðîâîãî ðàçâèòèÿ, èííîâàöèé è àýðîêîñìè÷åñêîé ïðîìûøëåííîñòè: TRL-9 – 1,
-TRL-8 – 1, TRL-7 – 2, TRL-6 – 2, TRL-4 – 1 îðãàíèçàöèÿ; Ìèíèñòåðñòâî
-ïðîìûøëåííîñòè è ñòðîèòåëüñòâà: TRL-9 – 1, TRL-8 – 1, TRL-4 – 1 îðãàíèçàöèÿ; Ìèíèñòåðñòâî
-ýêîëîãèè è ïðèðîäíûõ ðåñóðñîâ: TRL-9 – 2 îðãàíèçàöèè; Ìèíèñòåðñòâî âîäíûõ
-ðåñóðñîâ è èððèãàöèè - TRL-9 – 1; Ìèíèñòåðñòâî òðàíñïîðòà: TRL-9 – 1 îðãàíèçàöèÿ.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>В заключении
+следует отметить, что в разрезе министерств уровней технологической готовности
+достигли: Министерство здравоохранения: <span lang=EN-US>TRL</span>-9 – 4,
+TRL-8 – 1, TRL-7 – 7, TRL-6 – 2, TRL-4 – 4, TRL-2 – 1 организация; Министерство
+сельского хозяйства: TRL-9 – 10, TRL-8 – 4, TRL-6 – 3 организации; Министерство
+цифрового развития, инноваций и аэрокосмической промышленности: TRL-9 – 1,
+TRL-8 – 1, TRL-7 – 2, TRL-6 – 2, TRL-4 – 1 организация; Министерство
+промышленности и строительства: TRL-9 – 1, TRL-8 – 1, TRL-4 – 1 организация; Министерство
+экологии и природных ресурсов: TRL-9 – 2 организации; Министерство водных
+ресурсов и ирригации - TRL-9 – 1; Министерство транспорта: TRL-9 – 1 организация.</p>
 
 <p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
 
 <p class=MsoNormal>&nbsp;</p>
 
-</div>
 
+</div>
+</div>
+</div>
+	    </div>
+</div>
 </body>
 
 </html>
