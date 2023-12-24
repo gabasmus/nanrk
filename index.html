@@ -154,9 +154,10 @@ color: #1266B1;
 /* Clear floats after the columns */
 .row:after {
     content: "";
-    display: table;
     clear: both;
     margin-left: 300px; /* Same as the width of the sidenav */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
